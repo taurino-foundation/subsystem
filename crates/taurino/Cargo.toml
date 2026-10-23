@@ -1,0 +1,32 @@
+[package]
+name = "taurino"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+categories.workspace = true
+
+
+
+
+[lib]
+name = "core"
+crate-type = ["cdylib"]
+
+
+
+
+[dependencies]
+pyo3.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tao.workspace = true
+wry.workspace = true
+rmp-serde.workspace = true
+
+[lints]
+workspace = true

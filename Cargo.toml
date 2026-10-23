@@ -1,0 +1,76 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/taurino", "crates/taurino-ipc", 
+    "crates/taurino-macros", 
+    "crates/taurino-window",
+]
+
+[workspace.package]
+authors = ["AriBermeki <ari.bermeki.de@gmail.com>"]
+homepage = "https://github.com/taurino-foundation/taurino"
+repository = "https://github.com/taurino-foundation/taurino"
+categories = ["gui", "web-programming"]
+license = "Apache-2.0 OR MIT"
+edition = "2024"
+rust-version = "1.90"
+
+[workspace.dependencies]
+pyo3 = {version = "0.29.3", default-features = false, features = ["abi3-py39","anyhow","bytes","extension-module","generate-import-lib","macros"]}
+anyhow = "1.0.91"
+parking_lot = "0.12.5"
+getrandom = { version = "0.4", features = ["std"] }
+log = "0.4.34"
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1.0.154"
+serde_with = "3.24.0"
+serialize-to-javascript = "0.1.2"
+rmp-serde = "1.3.1"
+# Windowing and WebView
+tao = { version = "0.37.0", default-features = false, features = ["rwh_06", "serde"] }
+wry = { version = "0.57.0", default-features = false, features = ["os-webview", "linux-body"] }
+dpi = { version = "0.1", features = ["serde"] }
+# Utilities
+url = { version = "2", features = ["serde"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+
+
+
+
+# Standard-Release-Profil: klein & optimiert
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+incremental = false
+opt-level = "z"
+strip = true
+
+# Dev-Profil-Anpassung für schnellere Build-Tools
+[profile.dev.package.miniz_oxide]
+opt-level = 3
+
+# Aggressiveres Profil für maximale Größenreduktion
+[profile.release-size-optimized]
+inherits = "release"
+opt-level = "z"
+codegen-units = 1
+lto = "fat"
+incremental = false
+panic = "abort"
+strip = "symbols"
+
+
+
+# [workspace.lints.rust]
+# unsafe_code = "warn"
+# missing_docs = "warn"
+
+[workspace.lints.clippy]
+# TODO: Update in next PR to keep changes small, see https://github.com/tauri-apps/tauri/pull/16029
+collapsible_if = "allow"
+
+redundant_clone = "warn"
+assigning_clones = "warn"
+or_fun_call = "warn"
