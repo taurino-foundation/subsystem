@@ -1,4 +1,3 @@
-
 name: Taurino Desktop Wheels
 
 on:
@@ -17,343 +16,196 @@ concurrency:
   group: taurino-wheels-${{ github.ref }}
   cancel-in-progress: false
 
+defaults:
+  run:
+    shell: bash
+
 env:
-  UV_NO_PROGRESS: "1"
+  UV_NO_PROGRESS: '1'
+  PYTHONUNBUFFERED: '1'
   CARGO_TERM_COLOR: always
-  PYTHONUNBUFFERED: "1"
+  PYTHON_VERSION: '3.13'
+  MATURIN_SPEC: 'maturin>=1.14,<2'
 
 jobs:
-  # --------------------------------------------------
-  # 01 - Build GNU/Linux, Windows and macOS
-  # --------------------------------------------------
-  build:
-    name: Build / ${{ matrix.name }}
-    runs-on: ${{ matrix.os }}
-    timeout-minutes: 90
+  validate:
+    name: '01 / Validate source'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@v7
+      - name: Verify lockfile and metadata
+        run: |
+          uv lock --check
+          uv run --no-project --python 3.13 python - <<'PY'
+          import pathlib
+          import tomllib
+          root = pathlib.Path('.')
+          project = tomllib.loads((root / 'pyproject.toml').read_text(encoding='utf-8'))
+          assert project['project']['name'] == 'taurino'
+          assert project['tool']['maturin']['module-name'] == 'taurino.runtime.core'
+          assert (root / 'Cargo.lock').is_file()
+          print('Metadata verified')
+          PY
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - name: Rust formatting
+        run: cargo fmt --all -- --check
 
+  native:
+    name: '02 / ${{ matrix.name }}'
+    needs: validate
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 120
     strategy:
       fail-fast: false
       matrix:
         include:
-          - name: linux-gnu-x64
-            os: ubuntu-22.04
-            target: x86_64-unknown-linux-gnu
-            kind: linux
-
-          - name: linux-gnu-arm64
-            os: ubuntu-22.04-arm
-            target: aarch64-unknown-linux-gnu
-            kind: linux
-
-          - name: windows-x64
-            os: windows-2022
-            target: x86_64-pc-windows-msvc
-            kind: windows
-
-          - name: windows-arm64
-            os: windows-11-arm
-            target: aarch64-pc-windows-msvc
-            kind: windows
-
-          - name: macos-intel
-            os: macos-15-intel
-            target: x86_64-apple-darwin
-            kind: macos
-
-          - name: macos-arm64
-            os: macos-15
-            target: aarch64-apple-darwin
-            kind: macos
-
+          - {name: linux-gnu-x64, os: ubuntu-22.04, target: x86_64-unknown-linux-gnu, kind: linux}
+          - {name: linux-gnu-arm64, os: ubuntu-22.04-arm, target: aarch64-unknown-linux-gnu, kind: linux}
+          - {name: windows-x64, os: windows-2022, target: x86_64-pc-windows-msvc, kind: windows}
+          - {name: windows-arm64, os: windows-11-arm, target: aarch64-pc-windows-msvc, kind: windows}
+          - {name: macos-intel, os: macos-15-intel, target: x86_64-apple-darwin, kind: macos}
+          - {name: macos-arm64, os: macos-15, target: aarch64-apple-darwin, kind: macos}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false
-
+      - uses: astral-sh/setup-uv@v7
       - name: Install Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.13"
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
-
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
+        run: uv python install "$PYTHON_VERSION"
+      - uses: dtolnay/rust-toolchain@stable
         with:
           targets: ${{ matrix.target }}
-
-      - name: Install Linux GUI dependencies
+      - name: Install GTK and WebKitGTK
         if: matrix.kind == 'linux'
-        shell: bash
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            build-essential \
-            pkg-config \
-            patchelf \
-            libssl-dev \
-            libgtk-3-dev \
-            libwebkit2gtk-4.1-dev \
-            libayatana-appindicator3-dev \
-            librsvg2-dev \
-            libxdo-dev
-
-      - name: Install maturin
-        shell: bash
-        run: uv tool install "maturin>=1.14,<2"
-
-      - name: Build wheel
-        shell: bash
-        run: |
-          maturin build \
-            --release \
-            --locked \
-            --target "${{ matrix.target }}" \
-            --out dist
-
-      - name: Verify wheel
-        shell: bash
+            build-essential pkg-config patchelf libssl-dev \
+            libgtk-3-dev libwebkit2gtk-4.1-dev \
+            libayatana-appindicator3-dev librsvg2-dev libxdo-dev
+      - name: Compile wheel
         env:
-          EXPECTED_PLATFORM: ${{ matrix.kind }}
-          EXPECTED_TARGET: ${{ matrix.target }}
+          TARGET: ${{ matrix.target }}
+          KIND: ${{ matrix.kind }}
         run: |
-          python - <<'PY'
-          import glob
-          import os
-          import sys
-          import zipfile
-
-          wheels = glob.glob("dist/*.whl")
-          if len(wheels) != 1:
-              sys.exit(f"Expected one wheel: {wheels}")
-
-          wheel = wheels[0]
-          name = os.path.basename(wheel)
-          target = os.environ["EXPECTED_TARGET"]
-          kind = os.environ["EXPECTED_PLATFORM"]
-
-          checks = {
-              "linux": "linux",
-              "windows": "win",
-              "macos": "macosx",
-          }
-
-          expected = (
-              "macos" if kind == "macos" else kind
-          )
-
-          if checks[expected] not in name:
-              sys.exit(f"Wrong platform: {name}")
-
-          arch = "aarch64" if kind == "linux" else "arm64"
-          if target.startswith(("aarch64", "arm64")):
-              if arch not in name and "universal2" not in name:
-                  sys.exit(f"Wrong architecture: {name}")
-          elif "x86_64" not in name and "win_amd64" not in name:
-              sys.exit(f"Wrong architecture: {name}")
-
-          with zipfile.ZipFile(wheel) as z:
-              if z.testzip() is not None:
-                  sys.exit("Corrupt wheel")
-
-          print("Wheel verified:", name)
-          PY
-
-      - name: Install and test wheel
-        shell: bash
+          mkdir -p dist
+          args=(--release --locked --target "$TARGET" --out dist --interpreter "$(uv python find "$PYTHON_VERSION")")
+          # GTK/WebKitGTK is dynamically linked. A native linux tag is honest;
+          # do NOT falsely advertise manylinux portability.
+          if [[ "$KIND" == linux ]]; then
+            args+=(--compatibility linux)
+          fi
+          uvx --from "$MATURIN_SPEC" maturin build "${args[@]}"
+      - name: Validate wheel structure and tags
+        env:
+          TARGET: ${{ matrix.target }}
+          KIND: ${{ matrix.kind }}
         run: |
-          uv venv .wheel-test --python python
-          uv pip install \
-            --python .wheel-test \
-            --no-deps \
-            dist/*.whl
-
-          uv run \
-            --no-project \
-            --python .wheel-test \
-            python -c "import taurino.runtime.core; print('Native import OK')"
-
-      - name: Upload wheel
-        uses: actions/upload-artifact@v4
+          uv run --no-project --python "$PYTHON_VERSION" python .github/scripts/verify_wheels.py \
+            --directory dist --target "$TARGET" --kind "$KIND" --count 1
+      - name: Install wheel in fresh environment
+        run: |
+          uv venv .wheel-test --python "$PYTHON_VERSION"
+          uv pip install --python .wheel-test dist/*.whl
+          # Run from outside the checkout, so a local source tree cannot mask a broken wheel.
+          mkdir -p .wheel-smoke
+          cd .wheel-smoke
+          uv run --no-project --python ../.wheel-test python -c \
+            "import taurino.runtime.core; print('Native extension imported')"
+      - uses: actions/upload-artifact@v4
         with:
           name: wheel-${{ matrix.name }}
           path: dist/*.whl
           if-no-files-found: error
           retention-days: 30
 
-  # --------------------------------------------------
-  # 02 - Alpine Linux / musl builds
-  # --------------------------------------------------
-  build-musl:
-    name: Build / ${{ matrix.name }}
+  musl:
+    name: '03 / ${{ matrix.name }}'
+    needs: validate
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 90
-
-    container:
-      image: alpine:3.22
-
+    timeout-minutes: 120
     strategy:
       fail-fast: false
       matrix:
         include:
-          - name: linux-musl-x64
-            os: ubuntu-22.04
-            target: x86_64-unknown-linux-musl
-
-          - name: linux-musl-arm64
-            os: ubuntu-22.04-arm
-            target: aarch64-unknown-linux-musl
-
+          - {name: linux-musl-x64, os: ubuntu-22.04, target: x86_64-unknown-linux-musl}
+          - {name: linux-musl-arm64, os: ubuntu-22.04-arm, target: aarch64-unknown-linux-musl}
     steps:
-      - name: Install build dependencies
-        run: |
-          apk add --no-cache \
-            bash \
-            curl \
-            git \
-            build-base \
-            pkgconf \
-            python3 \
-            py3-pip \
-            openssl-dev \
-            gtk+3.0-dev \
-            webkit2gtk-4.1-dev \
-            libayatana-appindicator-dev \
-            librsvg-dev \
-            xdotool-dev \
-            patchelf
-
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false
-
-      - name: Install Rust
+      - name: Build inside native-architecture Alpine
+        env:
+          TARGET: ${{ matrix.target }}
         run: |
-          curl --proto '=https' --tlsv1.2 -sSf \
-            https://sh.rustup.rs \
+          # JavaScript GitHub Actions run on Ubuntu; only compilation uses Alpine.
+          docker run --rm -i \
+            -v "$PWD:/work" -w /work \
+            -e TARGET -e UV_NO_PROGRESS=1 -e CARGO_TERM_COLOR=always \
+            -e CARGO_HOME=/tmp/cargo -e RUSTUP_HOME=/tmp/rustup \
+            alpine:3.22 sh -eu <<'ALPINE'
+          apk add --no-cache \
+            bash curl ca-certificates git build-base pkgconf \
+            python3 py3-pip openssl-dev gtk+3.0-dev \
+            webkit2gtk-4.1-dev libayatana-appindicator-dev \
+            librsvg-dev xdotool-dev patchelf
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
             | sh -s -- -y --profile minimal
-
-          . "$HOME/.cargo/env"
-          rustup target add "${{ matrix.target }}"
-          rustc --version
-          cargo --version
-
-      - name: Install uv
-        run: |
-          curl -LsSf https://astral.sh/uv/install.sh \
-            | sh
-
-      - name: Build musllinux wheel
-        run: |
-          . "$HOME/.cargo/env"
+          export PATH="/tmp/cargo/bin:$PATH"
+          rustup target add "$TARGET"
+          curl -LsSf https://astral.sh/uv/install.sh | sh
           export PATH="$HOME/.local/bin:$PATH"
-
-          uvx --from "maturin>=1.14,<2" \
-            maturin build \
-              --release \
-              --locked \
-              --target "${{ matrix.target }}" \
-              --compatibility musllinux_1_2 \
-              --out dist
-
-      - name: Verify and test wheel
-        run: |
-          export PATH="$HOME/.local/bin:$PATH"
-
-          python3 - <<'PY'
-          import glob
-          import zipfile
-
-          wheels = glob.glob("dist/*.whl")
-          assert len(wheels) == 1, wheels
-          assert "musllinux" in wheels[0], wheels[0]
-
-          with zipfile.ZipFile(wheels[0]) as z:
-              assert z.testzip() is None
-
-          print("Verified:", wheels[0])
-          PY
-
-          uv venv .wheel-test --python python3
-          uv pip install \
-            --python .wheel-test \
-            --no-deps \
-            dist/*.whl
-
-          .wheel-test/bin/python \
-            -c "import taurino.runtime.core; print('Native import OK')"
-
-      - name: Upload musllinux wheel
-        uses: actions/upload-artifact@v4
+          mkdir -p dist
+          # Strict audit: failure is meaningful. Do not publish a wheel with
+          # falsely claimed musllinux compatibility.
+          uvx --from 'maturin>=1.14,<2' maturin build \
+            --release --locked --target "$TARGET" \
+            --compatibility musllinux_1_2 --auditwheel check \
+            --out dist --interpreter /usr/bin/python3
+          python3 .github/scripts/verify_wheels.py \
+            --directory dist --target "$TARGET" --kind musl --count 1
+          uv venv .wheel-test --python /usr/bin/python3
+          uv pip install --python .wheel-test/bin/python dist/*.whl
+          mkdir -p .wheel-smoke
+          cd .wheel-smoke
+          ../.wheel-test/bin/python -c \
+            "import taurino.runtime.core; print('musllinux native extension imported')"
+          ALPINE
+      - uses: actions/upload-artifact@v4
         with:
           name: wheel-${{ matrix.name }}
           path: dist/*.whl
           if-no-files-found: error
           retention-days: 30
 
-  # --------------------------------------------------
-  # 03 - Collect all wheels
-  # --------------------------------------------------
   collect:
-    name: Collect all wheels
-    needs: [build, build-musl]
+    name: '04 / Validate and collect 8 wheels'
+    needs: [native, musl]
     runs-on: ubuntu-24.04
-
+    timeout-minutes: 15
     steps:
-      - name: Download wheels
-        uses: actions/download-artifact@v4
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
         with:
           pattern: wheel-*
           path: incoming
-
-      - name: Validate and collect
+          merge-multiple: false
+      - name: Verify all targets and create SHA256 manifest
         run: |
-          python - <<'PY'
-          import hashlib
-          import pathlib
-          import shutil
-
-          incoming = list(
-              pathlib.Path("incoming").glob("**/*.whl")
-          )
-
-          if len(incoming) != 8:
-              raise SystemExit(
-                  f"Expected 8 wheels, got {len(incoming)}"
-              )
-
-          output = pathlib.Path("dist")
-          output.mkdir(exist_ok=True)
-
-          seen = {}
-
-          for src in sorted(incoming):
-              digest = hashlib.sha256(
-                  src.read_bytes()
-              ).hexdigest()
-
-              if src.name in seen:
-                  if seen[src.name] != digest:
-                      raise SystemExit(
-                          f"Conflicting wheel: {src.name}"
-                      )
-                  continue
-
-              shutil.copy2(src, output / src.name)
-              seen[src.name] = digest
-
-              print(f"{src.name} SHA256={digest}")
-
-          print(f"Collected {len(seen)} wheels")
-          PY
-
-      - name: Upload all wheels
-        uses: actions/upload-artifact@v4
+          python .github/scripts/verify_wheels.py \
+            --directory incoming --count 8 --all-targets --copy-to dist \
+            --checksum-file dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
         with:
           name: taurino-all-wheels
-          path: dist/*.whl
+          path: dist/
           if-no-files-found: error
           retention-days: 30
