@@ -162,12 +162,16 @@ jobs:
           curl -LsSf https://astral.sh/uv/install.sh | sh
           export PATH="$HOME/.local/bin:$PATH"
           mkdir -p dist
-          # Strict audit: failure is meaningful. Do not publish a wheel with
-          # falsely claimed musllinux compatibility.
+          # Repair external shared-library dependencies when possible.
+          # A successful repair does not guarantee WebKitGTK runtime portability.
           uvx --from 'maturin>=1.14,<2' maturin build \
-            --release --locked --target "$TARGET" \
-            --compatibility musllinux_1_2 --auditwheel check \
-            --out dist --interpreter /usr/bin/python3
+            --release \
+            --locked \
+            --target "$TARGET" \
+            --compatibility musllinux_1_2 \
+            --auditwheel repair \
+            --out dist \
+            --interpreter /usr/bin/python3
           python3 .github/scripts/verify_wheels.py \
             --directory dist --target "$TARGET" --kind musl --count 1
           uv venv .wheel-test --python /usr/bin/python3

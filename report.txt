@@ -1,0 +1,1691 @@
+03 / linux-musl-x64
+failed 1 minute ago in 2m 48s
+Search logs
+1s
+1s
+2m 43s
+Run # JavaScript GitHub Actions run on Ubuntu; only compilation uses Alpine.
+Unable to find image 'alpine:3.22' locally
+3.22: Pulling from library/alpine
+63e7e49699e8: Pulling fs layer
+63e7e49699e8: Verifying Checksum
+63e7e49699e8: Download complete
+63e7e49699e8: Pull complete
+Digest: sha256:2e0b81d60597f449baa56dc25d355367869d2dca4cd57e866f1e2b52af3eb55f
+Status: Downloaded newer image for alpine:3.22
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/community/x86_64/APKINDEX.tar.gz
+(1/362) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(2/362) Installing libncursesw (6.5_p20250503-r0)
+(3/362) Installing readline (8.2.13-r1)
+(4/362) Installing bash (5.2.37-r0)
+Executing bash-5.2.37-r0.post-install
+(5/362) Installing libgcc (14.2.0-r6)
+(6/362) Installing jansson (2.14.1-r0)
+(7/362) Installing libstdc++ (14.2.0-r6)
+(8/362) Installing zstd-libs (1.5.7-r0)
+(9/362) Installing binutils (2.44-r3)
+(10/362) Installing libmagic (5.46-r2)
+(11/362) Installing file (5.46-r2)
+(12/362) Installing libgomp (14.2.0-r6)
+(13/362) Installing libatomic (14.2.0-r6)
+(14/362) Installing gmp (6.3.0-r3)
+(15/362) Installing isl26 (0.26-r1)
+(16/362) Installing mpfr4 (4.2.1_p1-r0)
+(17/362) Installing mpc1 (1.3.1-r1)
+(18/362) Installing gcc (14.2.0-r6)
+(19/362) Installing libstdc++-dev (14.2.0-r6)
+(20/362) Installing musl-dev (1.2.5-r13)
+(21/362) Installing g++ (14.2.0-r6)
+(22/362) Installing make (4.4.1-r3)
+(23/362) Installing fortify-headers (1.1-r5)
+(24/362) Installing patch (2.8-r0)
+(25/362) Installing build-base (0.5-r3)
+(26/362) Installing ca-certificates (20261020-r0)
+(27/362) Installing brotli-libs (1.1.1-r0)
+(28/362) Installing c-ares (1.34.9-r0)
+(29/362) Installing libunistring (1.3-r0)
+(30/362) Installing libidn2 (2.3.7-r0)
+(31/362) Installing nghttp2-libs (1.69.0-r0)
+(32/362) Installing libpsl (0.21.5-r3)
+(33/362) Installing libcurl (8.14.1-r4)
+(34/362) Installing curl (8.14.1-r4)
+(35/362) Installing libexpat (2.9.0-r0)
+(36/362) Installing pcre2 (10.46-r1)
+(37/362) Installing git (2.49.1-r0)
+(38/362) Installing git-init-template (2.49.1-r0)
+(39/362) Installing pkgconf (2.4.3-r0)
+(40/362) Installing libffi (3.4.8-r0)
+(41/362) Installing libintl (0.24.1-r0)
+(42/362) Installing libeconf (0.6.3-r0)
+(43/362) Installing libblkid (2.41.6-r1)
+(44/362) Installing libmount (2.41.6-r1)
+(45/362) Installing glib (2.84.4-r0)
+(46/362) Installing xz-libs (5.8.4-r0)
+(47/362) Installing libxml2 (2.13.9-r1)
+(48/362) Installing shared-mime-info (2.4-r6)
+(49/362) Installing libjpeg-turbo (3.1.0-r0)
+(50/362) Installing libpng (1.6.59-r0)
+(51/362) Installing libsharpyuv (1.5.0-r0)
+(52/362) Installing libwebp (1.5.0-r0)
+(53/362) Installing tiff (4.7.2-r0)
+(54/362) Installing gdk-pixbuf (2.42.12-r1)
+(55/362) Installing libbz2 (1.0.8-r6)
+(56/362) Installing bzip2-dev (1.0.8-r6)
+(57/362) Installing libxml2-utils (2.13.9-r1)
+(58/362) Installing docbook-xml (4.5-r10)
+Executing docbook-xml-4.5-r10.post-install
+(59/362) Installing libxslt (1.1.43-r3)
+(60/362) Installing docbook-xsl-ns (1.79.2-r11)
+Executing docbook-xsl-ns-1.79.2-r11.post-install
+(61/362) Installing docbook-xsl-nons (1.79.2-r11)
+Executing docbook-xsl-nons-1.79.2-r11.post-install
+(62/362) Installing docbook-xsl (1.79.2-r11)
+(63/362) Installing xz (5.8.4-r0)
+(64/362) Installing gettext-asprintf (0.24.1-r0)
+(65/362) Installing gettext-libs (0.24.1-r0)
+(66/362) Installing gettext-envsubst (0.24.1-r0)
+(67/362) Installing gettext (0.24.1-r0)
+(68/362) Installing gettext-dev (0.24.1-r0)
+(69/362) Installing gdbm (1.24-r0)
+(70/362) Installing mpdecimal (4.0.1-r0)
+(71/362) Installing libpanelw (6.5_p20250503-r0)
+(72/362) Installing sqlite-libs (3.49.2-r1)
+(73/362) Installing python3 (3.12.15-r0)
+(74/362) Installing python3-pycache-pyc0 (3.12.15-r0)
+(75/362) Installing pyc (3.12.15-r0)
+(76/362) Installing python3-pyc (3.12.15-r0)
+(77/362) Installing py3-parsing (3.2.5-r0)
+(78/362) Installing py3-parsing-pyc (3.2.5-r0)
+(79/362) Installing py3-packaging (25.0-r0)
+(80/362) Installing py3-packaging-pyc (25.0-r0)
+(81/362) Installing linux-headers (6.14.2-r0)
+(82/362) Installing libffi-dev (3.4.8-r0)
+(83/362) Installing bsd-compat-headers (0.7.2-r6)
+(84/362) Installing libformw (6.5_p20250503-r0)
+(85/362) Installing libmenuw (6.5_p20250503-r0)
+(86/362) Installing libncurses++ (6.5_p20250503-r0)
+(87/362) Installing ncurses-dev (6.5_p20250503-r0)
+(88/362) Installing libedit (20250104.3.1-r1)
+(89/362) Installing libedit-dev (20250104.3.1-r1)
+(90/362) Installing zlib-dev (1.3.2-r1)
+(91/362) Installing libpcre2-16 (10.46-r1)
+(92/362) Installing libpcre2-32 (10.46-r1)
+(93/362) Installing pcre2-dev (10.46-r1)
+(94/362) Installing libuuid (2.41.6-r1)
+(95/362) Installing libfdisk (2.41.6-r1)
+(96/362) Installing skalibs-libs (2.14.4.0-r0)
+(97/362) Installing utmps-libs (0.1.3.1-r0)
+(98/362) Installing linux-pam (1.7.0-r4)
+(99/362) Installing liblastlog2 (2.41.6-r1)
+(100/362) Installing libsmartcols (2.41.6-r1)
+(101/362) Installing sqlite (3.49.2-r1)
+(102/362) Installing sqlite-dev (3.49.2-r1)
+(103/362) Installing util-linux-dev (2.41.6-r1)
+(104/362) Installing glib-dev (2.84.4-r0)
+(105/362) Installing libturbojpeg (3.1.0-r0)
+(106/362) Installing libjpeg-turbo-dev (3.1.0-r0)
+(107/362) Installing libpng-dev (1.6.59-r0)
+(108/362) Installing libtiffxx (4.7.2-r0)
+(109/362) Installing libwebpdecoder (1.5.0-r0)
+(110/362) Installing libwebpdemux (1.5.0-r0)
+(111/362) Installing libwebpmux (1.5.0-r0)
+(112/362) Installing libwebp-dev (1.5.0-r0)
+(113/362) Installing zstd (1.5.7-r0)
+(114/362) Installing zstd-dev (1.5.7-r0)
+(115/362) Installing tiff-dev (4.7.2-r0)
+(116/362) Installing gdk-pixbuf-dev (2.42.12-r1)
+(117/362) Installing libxau (1.0.12-r0)
+(118/362) Installing xorgproto (2024.1-r0)
+(119/362) Installing libxau-dev (1.0.12-r0)
+(120/362) Installing xcb-proto (1.17.0-r0)
+(121/362) Installing xcb-proto-pyc (1.17.0-r0)
+(122/362) Installing libmd (1.1.0-r0)
+(123/362) Installing libbsd (0.12.2-r0)
+(124/362) Installing libxdmcp (1.1.5-r1)
+(125/362) Installing libxcb (1.17.0-r0)
+(126/362) Installing libxdmcp-dev (1.1.5-r1)
+(127/362) Installing libxcb-dev (1.17.0-r0)
+(128/362) Installing xtrans (1.5.2-r0)
+(129/362) Installing libx11 (1.8.11-r0)
+(130/362) Installing libx11-dev (1.8.11-r0)
+(131/362) Installing libepoxy (1.5.10-r1)
+(132/362) Installing hwdata-pci (0.395-r0)
+(133/362) Installing libpciaccess (0.18.1-r0)
+(134/362) Installing libdrm (2.4.124-r0)
+(135/362) Installing libpciaccess-dev (0.18.1-r0)
+(136/362) Installing libdrm-dev (2.4.124-r0)
+(137/362) Installing libxext (1.3.6-r2)
+(138/362) Installing libxext-dev (1.3.6-r2)
+(139/362) Installing libxdamage (1.1.6-r5)
+(140/362) Installing libxfixes (6.0.1-r4)
+(141/362) Installing libxfixes-dev (6.0.1-r4)
+(142/362) Installing libxdamage-dev (1.1.6-r5)
+(143/362) Installing libxshmfence (1.3.3-r0)
+(144/362) Installing libxshmfence-dev (1.3.3-r0)
+(145/362) Installing llvm20-libs (20.1.8-r0)
+(146/362) Installing spirv-tools (1.4.313.0-r0)
+(147/362) Installing libelf (0.193-r0)
+(148/362) Installing wayland-libs-server (1.23.1-r3)
+(149/362) Installing mesa (25.1.9-r0)
+(150/362) Installing mesa-gbm (25.1.9-r0)
+(151/362) Installing wayland-libs-client (1.23.1-r3)
+(152/362) Installing mesa-egl (25.1.9-r0)
+(153/362) Installing libxxf86vm (1.1.7-r0)
+(154/362) Installing mesa-gl (25.1.9-r0)
+(155/362) Installing mesa-gles (25.1.9-r0)
+(156/362) Installing clang20-headers (20.1.8-r0)
+(157/362) Installing libclc (20.1.8-r0)
+(158/362) Installing spirv-llvm-translator-libs (20.1.2-r0)
+(159/362) Installing clang20-libs (20.1.8-r0)
+(160/362) Installing mesa-rusticl (25.1.9-r0)
+(161/362) Installing mesa-xatracker (25.1.9-r0)
+(162/362) Installing libxxf86vm-dev (1.1.7-r0)
+(163/362) Installing mesa-dev (25.1.9-r0)
+(164/362) Installing libepoxy-dev (1.5.10-r1)
+(165/362) Installing libxi (1.8.2-r0)
+(166/362) Installing libxi-dev (1.8.2-r0)
+(167/362) Installing libxinerama (1.1.5-r4)
+(168/362) Installing libxinerama-dev (1.1.5-r4)
+(169/362) Installing xkeyboard-config (2.43-r0)
+(170/362) Installing libxkbcommon (1.8.1-r2)
+(171/362) Installing libxkbcommon-x11 (1.8.1-r2)
+(172/362) Installing xz-dev (5.8.4-r0)
+(173/362) Installing libxml2-dev (2.13.9-r1)
+(174/362) Installing libxkbcommon-dev (1.8.1-r2)
+(175/362) Installing wayland-libs-cursor (1.23.1-r3)
+(176/362) Installing wayland-protocols (1.44-r0)
+(177/362) Installing gobject-introspection (1.84.0-r0)
+(178/362) Installing hicolor-icon-theme (0.18-r0)
+(179/362) Installing gtk-update-icon-cache (3.24.50-r0)
+(180/362) Installing libxcomposite (0.4.6-r5)
+(181/362) Installing libxrender (0.9.12-r0)
+(182/362) Installing libxcursor (1.2.3-r0)
+(183/362) Installing libxrandr (1.5.4-r1)
+(184/362) Installing libatk-1.0 (2.56.5-r0)
+(185/362) Installing dbus-libs (1.16.2-r1)
+(186/362) Installing at-spi2-core-libs (2.56.5-r0)
+(187/362) Installing libxtst (1.2.5-r0)
+(188/362) Installing at-spi2-core (2.56.5-r0)
+(189/362) Installing libatk-bridge-2.0 (2.56.5-r0)
+(190/362) Installing freetype (2.13.3-r0)
+(191/362) Installing fontconfig (2.15.0-r3)
+(192/362) Installing pixman (0.46.4-r0)
+(193/362) Installing cairo (1.18.4-r0)
+(194/362) Installing cairo-gobject (1.18.4-r0)
+(195/362) Installing avahi-libs (0.8-r21)
+(196/362) Installing nettle (3.10.2-r0)
+(197/362) Installing libtasn1 (4.21.0-r0)
+(198/362) Installing p11-kit (0.26.2-r0)
+(199/362) Installing gnutls (3.8.13-r0)
+(200/362) Installing cups-libs (2.4.18-r0)
+(201/362) Installing fribidi (1.0.16-r1)
+(202/362) Installing graphite2 (1.3.14-r6)
+(203/362) Installing harfbuzz (11.2.1-r0)
+(204/362) Installing libxft (2.3.8-r3)
+(205/362) Installing pango (1.56.3-r0)
+(206/362) Installing wayland-libs-egl (1.23.1-r3)
+(207/362) Installing gtk+3.0 (3.24.50-r0)
+(208/362) Installing dbus-dev (1.16.2-r1)
+(209/362) Installing libxtst-dev (1.2.5-r0)
+(210/362) Installing at-spi2-core-dev (2.56.5-r0)
+(211/362) Installing cairo-tools (1.18.4-r0)
+(212/362) Installing expat (2.9.0-r0)
+(213/362) Installing expat-dev (2.9.0-r0)
+(214/362) Installing brotli (1.1.1-r0)
+(215/362) Installing brotli-dev (1.1.1-r0)
+(216/362) Installing freetype-dev (2.13.3-r0)
+(217/362) Installing fontconfig-dev (2.15.0-r3)
+(218/362) Installing libxrender-dev (0.9.12-r0)
+(219/362) Installing pixman-dev (0.46.4-r0)
+(220/362) Installing util-macros (1.20.1-r0)
+(221/362) Installing xcb-util (0.4.1-r3)
+(222/362) Installing xcb-util-dev (0.4.1-r3)
+(223/362) Installing cairo-dev (1.18.4-r0)
+(224/362) Installing fribidi-dev (1.0.16-r1)
+(225/362) Installing pango-tools (1.56.3-r0)
+(226/362) Installing harfbuzz-cairo (11.2.1-r0)
+(227/362) Installing harfbuzz-gobject (11.2.1-r0)
+(228/362) Installing icu-data-en (76.1-r1)
+Executing icu-data-en-76.1-r1.post-install
+*
+* If you need ICU with non-English locales and legacy charset support, install
+* package icu-data-full.
+*
+(229/362) Installing icu-libs (76.1-r1)
+(230/362) Installing harfbuzz-icu (11.2.1-r0)
+(231/362) Installing harfbuzz-subset (11.2.1-r0)
+(232/362) Installing graphite2-dev (1.3.14-r6)
+(233/362) Installing icu (76.1-r1)
+(234/362) Installing icu-dev (76.1-r1)
+(235/362) Installing harfbuzz-dev (11.2.1-r0)
+(236/362) Installing libxft-dev (2.3.8-r3)
+(237/362) Installing pango-dev (1.56.3-r0)
+(238/362) Installing wayland-dev (1.23.1-r3)
+(239/362) Installing libxcomposite-dev (0.4.6-r5)
+(240/362) Installing libxcursor-dev (1.2.3-r0)
+(241/362) Installing libxrandr-dev (1.5.4-r1)
+(242/362) Installing gtk+3.0-dev (3.24.50-r0)
+(243/362) Installing ayatana-ido (0.10.4-r1)
+(244/362) Installing libayatana-indicator (0.9.4-r1)
+(245/362) Installing json-glib (1.10.8-r0)
+(246/362) Installing libdbusmenu-glib (16.04.0-r6)
+(247/362) Installing libdbusmenu-gtk3 (16.04.0-r6)
+(248/362) Installing libayatana-appindicator (0.5.94-r0)
+(249/362) Installing ayatana-ido-dev (0.10.4-r1)
+(250/362) Installing libayatana-indicator-dev (0.9.4-r1)
+(251/362) Installing json-glib-dev (1.10.8-r0)
+(252/362) Installing libdbusmenu-glib-dev (16.04.0-r6)
+(253/362) Installing libayatana-appindicator-dev (0.5.94-r0)
+(254/362) Installing libdav1d (1.5.1-r0)
+(255/362) Installing rsvg-convert (2.60.0-r0)
+(256/362) Installing librsvg (2.60.0-r0)
+(257/362) Installing dav1d-dev (1.5.1-r0)
+(258/362) Installing librsvg-dev (2.60.0-r0)
+(259/362) Installing openssl-dev (3.5.9-r0)
+(260/362) Installing patchelf (0.18.0-r3)
+(261/362) Installing py3-setuptools (80.9.0-r0)
+(262/362) Installing py3-setuptools-pyc (80.9.0-r0)
+(263/362) Installing py3-pip (25.1.1-r0)
+(264/362) Installing py3-pip-pyc (25.1.1-r0)
+(265/362) Installing gsettings-desktop-schemas (48.0-r0)
+(266/362) Installing duktape-libs (2.7.0-r2)
+(267/362) Installing libproxy (0.5.10-r0)
+(268/362) Installing glib-networking (2.80.1-r1)
+(269/362) Installing libsoup3 (3.6.5-r0)
+(270/362) Installing nghttp2-dev (1.69.0-r0)
+(271/362) Installing libpsl-utils (0.21.5-r3)
+(272/362) Installing libidn2-dev (2.3.7-r0)
+(273/362) Installing libpsl-dev (0.21.5-r3)
+(274/362) Installing libsoup3-dev (3.6.5-r0)
+(275/362) Installing libcap2 (2.78-r0)
+(276/362) Installing bubblewrap (0.12.0-r0)
+(277/362) Installing dbus (1.16.2-r1)
+Executing dbus-1.16.2-r1.pre-install
+Executing dbus-1.16.2-r1.post-install
+(278/362) Installing dbus-daemon-launch-helper (1.16.2-r1)
+(279/362) Installing xdg-dbus-proxy (0.1.6-r0)
+(280/362) Installing libgpg-error (1.55-r0)
+(281/362) Installing libgcrypt (1.10.3-r1)
+(282/362) Installing gcr-base (3.41.2-r1)
+(283/362) Installing gcr (3.41.2-r1)
+(284/362) Installing libcap-ng (0.8.5-r0)
+(285/362) Installing gnome-keyring (48.0-r0)
+(286/362) Installing gnome-keyring-pam (48.0-r0)
+(287/362) Installing aom-libs (3.12.1-r0)
+(288/362) Installing libyuv (0.0.1887.20251502-r1)
+(289/362) Installing libavif (1.3.0-r0)
+(290/362) Installing enchant2-libs (2.8.10-r0)
+(291/362) Installing alsa-lib (1.2.14-r0)
+(292/362) Installing flite (2.2-r5)
+(293/362) Installing libxv (1.0.13-r0)
+(294/362) Installing cdparanoia-libs (10.2-r14)
+(295/362) Installing graphene (1.10.8-r5)
+(296/362) Installing gstreamer (1.26.3-r0)
+(297/362) Installing gstreamer-ptp-helper (1.26.3-r0)
+(298/362) Installing libogg (1.3.5-r5)
+(299/362) Installing opus (1.5.2-r1)
+(300/362) Installing orc (0.4.40-r1)
+(301/362) Installing libtheora (1.1.1-r18)
+(302/362) Installing libvorbis (1.3.7-r2)
+(303/362) Installing gst-plugins-base (1.26.3-r0)
+(304/362) Installing openexr-libiex (3.3.11-r0)
+(305/362) Installing imath (3.1.12-r0)
+(306/362) Installing openexr-libilmthread (3.3.11-r0)
+(307/362) Installing libdeflate (1.23-r0)
+(308/362) Installing openexr-libopenexrcore (3.3.11-r0)
+(309/362) Installing openexr-libopenexr (3.3.11-r0)
+(310/362) Installing soundtouch (2.3.3-r0)
+(311/362) Installing libunibreak (6.1-r0)
+(312/362) Installing libass (0.17.3-r0)
+(313/362) Installing libraw1394 (2.1.2-r5)
+(314/362) Installing libusb (1.0.28-r0)
+(315/362) Installing libdc1394 (2.2.7-r0)
+(316/362) Installing libde265 (1.0.15-r1)
+(317/362) Installing tslib (1.23-r0)
+(318/362) Installing directfb (1.7.7-r8)
+(319/362) Installing faac (1.31.1-r0)
+(320/362) Installing fdk-aac (2.0.2-r4)
+(321/362) Installing libfreeaptx (0.2.2-r0)
+(322/362) Installing gsm (1.0.22-r3)
+(323/362) Installing eudev-libs (3.2.14-r5)
+(324/362) Installing libgudev (238-r0)
+(325/362) Installing lcms2 (2.19-r0)
+(326/362) Installing libldac (2.0.2.3-r1)
+(327/362) Installing libmodplug (0.8.9.0-r3)
+(328/362) Installing neon (0.33.0-r0)
+(329/362) Installing libnice (0.1.22-r0)
+(330/362) Installing openal-soft-libs (1.24.2-r0)
+(331/362) Installing openh264 (2.6.0-r0)
+(332/362) Installing openjpeg (2.5.4-r1)
+(333/362) Installing librtmp (2.4_git20190330-r5)
+(334/362) Installing sbc (2.0-r2)
+(335/362) Installing libflac (1.4.3-r1)
+(336/362) Installing lame-libs (3.100-r5)
+(337/362) Installing mpg123-libs (1.32.10-r0)
+(338/362) Installing libsndfile (1.2.2-r2)
+(339/362) Installing spandsp (0.0.6-r5)
+(340/362) Installing libsrt (1.5.3-r1)
+(341/362) Installing libsrtp (2.6.0-r0)
+(342/362) Installing libva (2.22.0-r1)
+(343/362) Installing vo-aacenc (0.1.3-r3)
+(344/362) Installing vo-amrwbenc (0.1.3-r3)
+(345/362) Installing vulkan-loader (1.4.313.0-r0)
+(346/362) Installing libzbar (0.23.93-r1)
+(347/362) Installing gst-plugins-bad (1.26.3-r0)
+(348/362) Installing hyphen (2.8.8-r3)
+(349/362) Installing giflib (5.2.2-r2)
+(350/362) Installing libhwy (1.0.7-r1)
+(351/362) Installing libjxl (0.10.3-r2)
+(352/362) Installing libevdev (1.13.3-r0)
+(353/362) Installing hidapi (0.14.0-r0)
+(354/362) Installing libmanette (0.2.12-r0)
+(355/362) Installing libseccomp (2.6.1-r0)
+(356/362) Installing libsecret (0.21.7-r0)
+(357/362) Installing libwoff2common (1.0.2-r4)
+(358/362) Installing libwoff2enc (1.0.2-r4)
+(359/362) Installing webkit2gtk-4.1 (2.48.1-r1)
+(360/362) Installing webkit2gtk-4.1-dev (2.48.1-r1)
+(361/362) Installing xdotool (3.20211022.1-r1)
+(362/362) Installing xdotool-dev (3.20211022.1-r1)
+Executing busybox-1.37.0-r20.trigger
+Executing ca-certificates-20261020-r0.trigger
+Executing glib-2.84.4-r0.trigger
+Executing shared-mime-info-2.4-r6.trigger
+Executing gdk-pixbuf-2.42.12-r1.trigger
+Executing gtk-update-icon-cache-3.24.50-r0.trigger
+Executing gtk+3.0-3.24.50-r0.trigger
+Executing dbus-1.16.2-r1.trigger
+OK: 1236 MiB in 378 packages
+info: downloading installer
+info: profile set to minimal
+info: default host tuple is x86_64-unknown-linux-musl
+info: syncing channel updates for stable-x86_64-unknown-linux-musl
+info: latest update on 2026-10-15 for version 1.99.1 (58cf8f9c3 2026-10-13)
+info: downloading 3 components
+info: default toolchain set to stable-x86_64-unknown-linux-musl
+
+  stable-x86_64-unknown-linux-musl installed - rustc 1.99.1 (58cf8f9c3 2026-10-13)
+
+
+Rust is installed now. Great!
+
+To get started you may need to restart your current shell.
+This would reload your PATH environment variable to include
+Cargo's bin directory (/tmp/cargo/bin).
+
+To configure your current shell, you need to source the
+corresponding env file under /tmp/cargo.
+
+Consider running the right command for your shell (note the leading DOT):
+. "/tmp/cargo/env" # For sh/ash/dash/pdksh
+cargo:rerun-if-env-changed=CC_x86_64-unknown-linux-musl
+CC_x86_64-unknown-linux-musl = None
+cargo:rerun-if-env-changed=CC_x86_64_unknown_linux_musl
+CC_x86_64_unknown_linux_musl = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_unknown_linux_musl
+CFLAGS_x86_64_unknown_linux_musl = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64-unknown-linux-musl
+CFLAGS_x86_64-unknown-linux-musl = None
+info: component rust-std is up to date
+downloading uv 0.13.5 x86_64-unknown-linux-musl-static
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading maturin (10.1MiB)
+ Downloaded maturin
+Installed 1 package in 2ms
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded autocfg v1.5.1
+  Downloaded bitflags v1.3.2
+  Downloaded atk v0.18.2
+  Downloaded anyhow v1.0.104
+  Downloaded atk-sys v0.18.2
+  Downloaded dirs-sys v0.5.0
+  Downloaded futures-core v0.3.34
+  Downloaded bitflags v2.13.2
+  Downloaded futures-io v0.3.34
+  Downloaded equivalent v1.0.3
+  Downloaded dlopen2_derive v0.4.3
+  Downloaded errno v0.3.14
+  Downloaded futures-executor v0.3.34
+  Downloaded rustc_version v0.4.1
+  Downloaded gdk-pixbuf v0.18.5
+  Downloaded displaydoc v0.2.7
+  Downloaded gobject-sys v0.18.0
+  Downloaded litemap v0.8.3
+  Downloaded form_urlencoded v1.2.2
+  Downloaded smallvec v1.16.3
+  Downloaded slab v0.4.12
+  Downloaded cairo-rs v0.18.5
+  Downloaded pango v0.18.3
+  Downloaded serde_spanned v0.6.9
+  Downloaded itoa v1.0.18
+  Downloaded memoffset v0.9.1
+  Downloaded potential_utf v0.1.6
+  Downloaded dirs v7.0.0
+  Downloaded glib-sys v0.18.1
+  Downloaded javascriptcore-rs-sys v1.1.1
+  Downloaded lock_api v0.4.14
+  Downloaded num-traits v0.2.19
+  Downloaded parking_lot v0.12.5
+  Downloaded num-conv v0.2.2
+  Downloaded log v0.4.34
+  Downloaded pin-project-lite v0.2.17
+  Downloaded field-offset v0.3.6
+  Downloaded futures-macro v0.3.34
+  Downloaded proc-macro-crate v1.3.1
+  Downloaded cairo-sys-rs v0.18.2
+  Downloaded soup3 v0.5.0
+  Downloaded stable_deref_trait v1.2.1
+  Downloaded pkg-config v0.3.34
+  Downloaded crossbeam-utils v0.8.23
+  Downloaded futures-task v0.3.34
+  Downloaded heck v0.4.1
+  Downloaded percent-encoding v2.3.2
+  Downloaded gdk-pixbuf-sys v0.18.0
+  Downloaded pango-sys v0.18.0
+  Downloaded crossbeam-channel v0.5.17
+  Downloaded once_cell v1.21.4
+  Downloaded proc-macro-crate v2.0.2
+  Downloaded proc-macro-error-attr v1.0.4
+  Downloaded proc-macro2 v1.0.107
+  Downloaded rmp-serde v1.3.1
+  Downloaded scopeguard v1.2.0
+  Downloaded serde_core v1.0.229
+  Downloaded zerofrom v0.1.8
+  Downloaded cookie v0.18.2
+  Downloaded deranged v0.5.9
+  Downloaded dlopen2 v0.8.2
+  Downloaded gdk v0.18.2
+  Downloaded gdkwayland-sys v0.18.2
+  Downloaded icu_locale_core v2.4.0
+  Downloaded icu_provider v2.4.0
+  Downloaded option-ext v0.2.0
+  Downloaded powerfmt v0.2.1
+  Downloaded rmp v0.8.15
+  Downloaded yoke-derive v0.8.4
+  Downloaded idna v1.1.0
+  Downloaded javascriptcore-rs v1.1.2
+  Downloaded pyo3-build-config v0.29.3
+  Downloaded pyo3-ffi v0.29.3
+  Downloaded pyo3-macros-backend v0.29.3
+  Downloaded raw-window-handle v0.6.2
+  Downloaded cfg-if v1.0.5
+  Downloaded dpi v0.1.2
+  Downloaded fastrand v2.5.0
+  Downloaded gio-sys v0.18.1
+  Downloaded http v1.5.0
+  Downloaded indexmap v2.14.2
+  Downloaded zerofrom-derive v0.1.8
+  Downloaded bytes v1.12.1
+  Downloaded futures-channel v0.3.34
+  Downloaded glib-macros v0.18.5
+  Downloaded gtk-sys v0.18.2
+  Downloaded icu_normalizer_data v2.4.0
+  Downloaded icu_properties v2.4.0
+  Downloaded memchr v2.8.3
+  Downloaded gtk3-macros v0.18.2
+  Downloaded icu_collections v2.4.0
+  Downloaded gdk-sys v0.18.2
+  Downloaded idna_adapter v1.2.2
+  Downloaded pyo3-macros v0.29.3
+  Downloaded utf8_iter v1.0.4
+  Downloaded hashbrown v0.17.1
+  Downloaded heck v0.5.0
+  Downloaded time-core v0.1.9
+  Downloaded version-compare v0.2.1
+  Downloaded cfg-expr v0.15.8
+  Downloaded futures-util v0.3.34
+  Downloaded getrandom v0.4.3
+  Downloaded gio v0.18.4
+  Downloaded glib v0.18.5
+  Downloaded proc-macro-error v1.0.4
+  Downloaded memmap2 v0.9.12
+  Downloaded parking_lot_core v0.9.12
+  Downloaded toml_datetime v0.6.3
+  Downloaded thiserror v2.0.21
+  Downloaded thiserror-impl v2.0.21
+  Downloaded quote v1.0.47
+  Downloaded synstructure v0.14.0
+  Downloaded target-lexicon v0.13.5
+  Downloaded gtk v0.18.2
+  Downloaded icu_properties_data v2.4.0
+  Downloaded rustix v1.1.5
+  Downloaded soup3-sys v0.5.0
+  Downloaded zerovec-derive v0.11.7
+  Downloaded tempfile v3.27.0
+  Downloaded time-macros v0.2.32
+  Downloaded icu_normalizer v2.4.0
+  Downloaded version_check v0.9.5
+  Downloaded thiserror-impl v1.0.69
+  Downloaded tinystr v0.8.5
+  Downloaded zmij v1.0.23
+  Downloaded target-lexicon v0.12.16
+  Downloaded system-deps v6.2.2
+  Downloaded writeable v0.6.4
+  Downloaded thiserror v1.0.69
+  Downloaded toml v0.8.2
+  Downloaded unicode-ident v1.0.27
+  Downloaded webkit2gtk-sys v2.0.2
+  Downloaded libc v0.2.191
+  Downloaded yoke v0.8.4
+  Downloaded semver v1.0.28
+  Downloaded serde_derive v1.0.229
+  Downloaded webkit2gtk v2.0.2
+  Downloaded pyo3 v0.29.3
+  Downloaded toml_edit v0.19.15
+  Downloaded toml_edit v0.20.2
+  Downloaded url v2.5.8
+  Downloaded zerotrie v0.2.5
+  Downloaded serde v1.0.229
+  Downloaded zerovec v0.11.9
+  Downloaded serde_json v1.0.154
+  Downloaded winnow v0.5.40
+  Downloaded syn v1.0.109
+  Downloaded wry v0.57.1
+  Downloaded time v0.3.55
+  Downloaded syn v3.0.9
+  Downloaded tao v0.37.2
+  Downloaded syn v2.0.119
+  Downloaded linux-raw-sys v0.12.1
+🍹 Building a mixed python/rust project
+🐍 Found CPython 3.12 at /usr/bin/python3
+🔗 Found pyo3 bindings with abi3-py3.9 support
+📡 Using build options bindings from pyproject.toml
+warning: profile package spec `miniz_oxide` in profile `dev` did not match any packages
+   Compiling serde_core v1.0.229
+   Compiling serde v1.0.229
+   Compiling equivalent v1.0.3
+   Compiling hashbrown v0.17.1
+   Compiling winnow v0.5.40
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.27
+   Compiling indexmap v2.14.2
+   Compiling quote v1.0.47
+   Compiling target-lexicon v0.12.16
+   Compiling heck v0.5.0
+   Compiling smallvec v1.16.3
+   Compiling pkg-config v0.3.34
+   Compiling cfg-expr v0.15.8
+   Compiling version-compare v0.2.1
+   Compiling syn v3.0.9
+   Compiling libc v0.2.191
+   Compiling version_check v0.9.5
+   Compiling syn v2.0.119
+   Compiling toml_datetime v0.6.3
+   Compiling serde_spanned v0.6.9
+   Compiling toml_edit v0.20.2
+   Compiling proc-macro-error-attr v1.0.4
+   Compiling syn v1.0.109
+   Compiling proc-macro-error v1.0.4
+   Compiling futures-core v0.3.34
+   Compiling toml v0.8.2
+   Compiling system-deps v6.2.2
+   Compiling synstructure v0.14.0
+   Compiling glib-sys v0.18.1
+   Compiling gobject-sys v0.18.0
+   Compiling gio-sys v0.18.1
+   Compiling futures-macro v0.3.34
+   Compiling zerofrom-derive v0.1.8
+   Compiling futures-task v0.3.34
+   Compiling pin-project-lite v0.2.17
+   Compiling thiserror v1.0.69
+   Compiling slab v0.4.12
+   Compiling once_cell v1.21.4
+   Compiling futures-util v0.3.34
+   Compiling thiserror-impl v1.0.69
+   Compiling zerofrom v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling gdk-sys v0.18.2
+   Compiling proc-macro-crate v2.0.2
+   Compiling memchr v2.8.3
+   Compiling stable_deref_trait v1.2.1
+   Compiling heck v0.4.1
+   Compiling glib-macros v0.18.5
+   Compiling yoke v0.8.4
+   Compiling futures-executor v0.3.34
+   Compiling atk-sys v0.18.2
+   Compiling futures-channel v0.3.34
+   Compiling autocfg v1.5.1
+   Compiling bitflags v2.13.2
+   Compiling zerovec-derive v0.11.7
+   Compiling pango-sys v0.18.0
+   Compiling cairo-sys-rs v0.18.2
+   Compiling gdk-pixbuf-sys v0.18.0
+   Compiling displaydoc v0.2.7
+   Compiling zerovec v0.11.9
+   Compiling gtk-sys v0.18.2
+   Compiling gio v0.18.4
+   Compiling futures-io v0.3.34
+   Compiling target-lexicon v0.13.5
+   Compiling tinystr v0.8.5
+   Compiling writeable v0.6.4
+   Compiling semver v1.0.28
+   Compiling litemap v0.8.3
+   Compiling rustc_version v0.4.1
+   Compiling icu_locale_core v2.4.0
+   Compiling potential_utf v0.1.6
+   Compiling zerotrie v0.2.5
+   Compiling glib v0.18.5
+   Compiling memoffset v0.9.1
+   Compiling utf8_iter v1.0.4
+   Compiling icu_normalizer_data v2.4.0
+   Compiling icu_properties_data v2.4.0
+   Compiling icu_provider v2.4.0
+   Compiling icu_collections v2.4.0
+   Compiling pyo3-build-config v0.29.3
+   Compiling field-offset v0.3.6
+   Compiling javascriptcore-rs-sys v1.1.1
+   Compiling soup3-sys v0.5.0
+   Compiling toml_edit v0.19.15
+   Compiling proc-macro-crate v1.3.1
+   Compiling serde_derive v1.0.229
+   Compiling webkit2gtk-sys v2.0.2
+   Compiling gtk v0.18.2
+   Compiling gtk3-macros v0.18.2
+   Compiling icu_properties v2.4.0
+   Compiling icu_normalizer v2.4.0
+   Compiling pyo3-ffi v0.29.3
+   Compiling num-traits v0.2.19
+   Compiling cairo-rs v0.18.5
+   Compiling atk v0.18.2
+   Compiling time-core v0.1.9
+   Compiling bitflags v1.3.2
+   Compiling parking_lot_core v0.9.12
+   Compiling crossbeam-utils v0.8.23
+   Compiling percent-encoding v2.3.2
+   Compiling num-conv v0.2.2
+   Compiling time-macros v0.2.32
+   Compiling idna_adapter v1.2.2
+   Compiling cookie v0.18.2
+   Compiling itoa v1.0.18
+   Compiling zmij v1.0.23
+   Compiling thiserror v2.0.21
+   Compiling cfg-if v1.0.5
+   Compiling bytes v1.12.1
+   Compiling deranged v0.5.9
+   Compiling option-ext v0.2.0
+   Compiling powerfmt v0.2.1
+   Compiling anyhow v1.0.104
+   Compiling scopeguard v1.2.0
+   Compiling lock_api v0.4.14
+   Compiling dirs-sys v0.5.0
+   Compiling idna v1.1.0
+   Compiling time v0.3.55
+   Compiling form_urlencoded v1.2.2
+   Compiling javascriptcore-rs v1.1.2
+   Compiling dpi v0.1.2
+   Compiling pyo3 v0.29.3
+   Compiling dlopen2_derive v0.4.3
+   Compiling thiserror-impl v2.0.21
+   Compiling pyo3-macros-backend v0.29.3
+   Compiling serde_json v1.0.154
+   Compiling raw-window-handle v0.6.2
+   Compiling wry v0.57.1
+   Compiling dlopen2 v0.8.2
+   Compiling crossbeam-channel v0.5.17
+   Compiling url v2.5.8
+   Compiling rmp v0.8.15
+   Compiling parking_lot v0.12.5
+   Compiling dirs v7.0.0
+   Compiling http v1.5.0
+   Compiling gdkwayland-sys v0.18.2
+   Compiling log v0.4.34
+   Compiling rmp-serde v1.3.1
+   Compiling pyo3-macros v0.29.3
+   Compiling gdk-pixbuf v0.18.5
+   Compiling pango v0.18.3
+   Compiling soup3 v0.5.0
+   Compiling gdk v0.18.2
+   Compiling webkit2gtk v2.0.2
+   Compiling tao v0.37.2
+   Compiling taurino v0.1.0 (/work/crates/taurino)
+    Finished `release` profile [optimized] target(s) in 2m 11s
+🔗 External shared libraries to be copied into the wheel:
+  /work/target/maturin/libcore.so requires:
+    libcairo-gobject.so.2 => /usr/lib/libcairo-gobject.so.2.11804.4
+    libglib-2.0.so.0 => /usr/lib/libglib-2.0.so.0.8400.4
+    libXi.so.6 => /usr/lib/libXi.so.6.1.0
+    libfribidi.so.0 => /usr/lib/libfribidi.so.0.4.0
+    libcairo.so.2 => /usr/lib/libcairo.so.2.11804.4
+    libXext.so.6 => /usr/lib/libXext.so.6.4.0
+    libpcre2-8.so.0 => /usr/lib/libpcre2-8.so.0.14.0
+    libeconf.so.0 => /usr/lib/libeconf.so.0.6.2
+    libgobject-2.0.so.0 => /usr/lib/libgobject-2.0.so.0.8400.4
+    libgdk-3.so.0 => /usr/lib/libgdk-3.so.0.2418.32
+    libXrender.so.1 => /usr/lib/libXrender.so.1.3.0
+    libxcb-render.so.0 => /usr/lib/libxcb-render.so.0.0.0
+    libwayland-client.so.0 => /usr/lib/libwayland-client.so.0.23.1
+    libX11.so.6 => /usr/lib/libX11.so.6.4.0
+    libpng16.so.16 => /usr/lib/libpng16.so.16.59.0
+    libxkbcommon.so.0 => /usr/lib/libxkbcommon.so.0.8.1
+    libmount.so.1 => /usr/lib/libmount.so.1.1.0
+    libXcursor.so.1 => /usr/lib/libXcursor.so.1.0.2
+    libbz2.so.1 => /usr/lib/libbz2.so.1.0.8
+    libXcomposite.so.1 => /usr/lib/libXcomposite.so.1.0.0
+    libgdk_pixbuf-2.0.so.0 => /usr/lib/libgdk_pixbuf-2.0.so.0.4200.12
+    libfreetype.so.6 => /usr/lib/libfreetype.so.6.20.2
+    libXdmcp.so.6 => /usr/lib/libXdmcp.so.6.0.0
+    libbrotlidec.so.1 => /usr/lib/libbrotlidec.so.1.1.1
+    libwayland-egl.so.1 => /usr/lib/libwayland-egl.so.1.23.1
+    libblkid.so.1 => /usr/lib/libblkid.so.1.1.0
+    libatspi.so.0 => /usr/lib/libatspi.so.0.0.1
+    libexpat.so.1 => /usr/lib/libexpat.so.1.13.0
+    libpango-1.0.so.0 => /usr/lib/libpango-1.0.so.0.5600.3
+    libwayland-cursor.so.0 => /usr/lib/libwayland-cursor.so.0.23.1
+    libepoxy.so.0 => /usr/lib/libepoxy.so.0.0.0
+    libgio-2.0.so.0 => /usr/lib/libgio-2.0.so.0.8400.4
+    libgcc_s.so.1 => /usr/lib/libgcc_s.so.1
+    libxcb-shm.so.0 => /usr/lib/libxcb-shm.so.0.0.0
+    libjpeg.so.8 => /usr/lib/libjpeg.so.8.3.2
+    libintl.so.8 => /usr/lib/libintl.so.8.4.3
+    libXau.so.6 => /usr/lib/libXau.so.6.0.0
+    libmd.so.0 => /usr/lib/libmd.so.0.1.0
+    libxcb.so.1 => /usr/lib/libxcb.so.1.1.0
+    libgtk-3.so.0 => /usr/lib/libgtk-3.so.0.2418.32
+    libdbus-1.so.3 => /usr/lib/libdbus-1.so.3.38.3
+    libpangocairo-1.0.so.0 => /usr/lib/libpangocairo-1.0.so.0.5600.3
+    libXdamage.so.1 => /usr/lib/libXdamage.so.1.1.0
+    libbrotlicommon.so.1 => /usr/lib/libbrotlicommon.so.1.1.1
+    libpangoft2-1.0.so.0 => /usr/lib/libpangoft2-1.0.so.0.5600.3
+    libpixman-1.so.0 => /usr/lib/libpixman-1.so.0.46.4
+    libffi.so.8 => /usr/lib/libffi.so.8.1.4
+    libgmodule-2.0.so.0 => /usr/lib/libgmodule-2.0.so.0.8400.4
+    libatk-bridge-2.0.so.0 => /usr/lib/libatk-bridge-2.0.so.0.0.0
+    libbsd.so.0 => /usr/lib/libbsd.so.0.12.2
+    libfontconfig.so.1 => /usr/lib/libfontconfig.so.1.12.1
+    libharfbuzz.so.0 => /usr/lib/libharfbuzz.so.0.61121.0
+    libatk-1.0.so.0 => /usr/lib/libatk-1.0.so.0.25614.1
+    libXrandr.so.2 => /usr/lib/libXrandr.so.2.2.0
+    libXfixes.so.3 => /usr/lib/libXfixes.so.3.1.0
+    libXinerama.so.1 => /usr/lib/libXinerama.so.1.0.0
+    libgraphite2.so.3 => /usr/lib/libgraphite2.so.3.2.1
+💥 maturin failed
+  Caused by: Your library requires copying the above external libraries. Re-run with `--auditwheel=repair` to copy them.
+Error: Process completed with exit code 1.
+0s
+0s
+Post job cleanup.
+/usr/bin/git version
+git version 2.55.0
+Temporarily overriding HOME='/home/runner/work/_temp/4a25023f-85ed-46fb-9c42-a352be2dc566' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/subsystem/subsystem
+/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+1s
+Cleaning up orphan processes
+Warning: Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
+
+
+
+----------------------
+
+
+
+
+
+03 / linux-musl-arm64
+failed 2 minutes ago in 2m 2s
+Search logs
+1s
+0s
+1m 57s
+Run # JavaScript GitHub Actions run on Ubuntu; only compilation uses Alpine.
+Unable to find image 'alpine:3.22' locally
+3.22: Pulling from library/alpine
+281d5a96263b: Pulling fs layer
+281d5a96263b: Download complete
+281d5a96263b: Pull complete
+Digest: sha256:2e0b81d60597f449baa56dc25d355367869d2dca4cd57e866f1e2b52af3eb55f
+Status: Downloaded newer image for alpine:3.22
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/main/aarch64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/community/aarch64/APKINDEX.tar.gz
+(1/362) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(2/362) Installing libncursesw (6.5_p20250503-r0)
+(3/362) Installing readline (8.2.13-r1)
+(4/362) Installing bash (5.2.37-r0)
+Executing bash-5.2.37-r0.post-install
+(5/362) Installing libgcc (14.2.0-r6)
+(6/362) Installing jansson (2.14.1-r0)
+(7/362) Installing libstdc++ (14.2.0-r6)
+(8/362) Installing zstd-libs (1.5.7-r0)
+(9/362) Installing binutils (2.44-r3)
+(10/362) Installing libmagic (5.46-r2)
+(11/362) Installing file (5.46-r2)
+(12/362) Installing libgomp (14.2.0-r6)
+(13/362) Installing libatomic (14.2.0-r6)
+(14/362) Installing gmp (6.3.0-r3)
+(15/362) Installing isl26 (0.26-r1)
+(16/362) Installing mpfr4 (4.2.1_p1-r0)
+(17/362) Installing mpc1 (1.3.1-r1)
+(18/362) Installing gcc (14.2.0-r6)
+(19/362) Installing libstdc++-dev (14.2.0-r6)
+(20/362) Installing musl-dev (1.2.5-r13)
+(21/362) Installing g++ (14.2.0-r6)
+(22/362) Installing make (4.4.1-r3)
+(23/362) Installing fortify-headers (1.1-r5)
+(24/362) Installing patch (2.8-r0)
+(25/362) Installing build-base (0.5-r3)
+(26/362) Installing ca-certificates (20261020-r0)
+(27/362) Installing brotli-libs (1.1.1-r0)
+(28/362) Installing c-ares (1.34.9-r0)
+(29/362) Installing libunistring (1.3-r0)
+(30/362) Installing libidn2 (2.3.7-r0)
+(31/362) Installing nghttp2-libs (1.69.0-r0)
+(32/362) Installing libpsl (0.21.5-r3)
+(33/362) Installing libcurl (8.14.1-r4)
+(34/362) Installing curl (8.14.1-r4)
+(35/362) Installing libexpat (2.9.0-r0)
+(36/362) Installing pcre2 (10.46-r1)
+(37/362) Installing git (2.49.1-r0)
+(38/362) Installing git-init-template (2.49.1-r0)
+(39/362) Installing pkgconf (2.4.3-r0)
+(40/362) Installing libffi (3.4.8-r0)
+(41/362) Installing libintl (0.24.1-r0)
+(42/362) Installing libeconf (0.6.3-r0)
+(43/362) Installing libblkid (2.41.6-r1)
+(44/362) Installing libmount (2.41.6-r1)
+(45/362) Installing glib (2.84.4-r0)
+(46/362) Installing xz-libs (5.8.4-r0)
+(47/362) Installing libxml2 (2.13.9-r1)
+(48/362) Installing shared-mime-info (2.4-r6)
+(49/362) Installing libjpeg-turbo (3.1.0-r0)
+(50/362) Installing libpng (1.6.59-r0)
+(51/362) Installing libsharpyuv (1.5.0-r0)
+(52/362) Installing libwebp (1.5.0-r0)
+(53/362) Installing tiff (4.7.2-r0)
+(54/362) Installing gdk-pixbuf (2.42.12-r1)
+(55/362) Installing libbz2 (1.0.8-r6)
+(56/362) Installing bzip2-dev (1.0.8-r6)
+(57/362) Installing libxml2-utils (2.13.9-r1)
+(58/362) Installing docbook-xml (4.5-r10)
+Executing docbook-xml-4.5-r10.post-install
+(59/362) Installing libxslt (1.1.43-r3)
+(60/362) Installing docbook-xsl-ns (1.79.2-r11)
+Executing docbook-xsl-ns-1.79.2-r11.post-install
+(61/362) Installing docbook-xsl-nons (1.79.2-r11)
+Executing docbook-xsl-nons-1.79.2-r11.post-install
+(62/362) Installing docbook-xsl (1.79.2-r11)
+(63/362) Installing xz (5.8.4-r0)
+(64/362) Installing gettext-asprintf (0.24.1-r0)
+(65/362) Installing gettext-libs (0.24.1-r0)
+(66/362) Installing gettext-envsubst (0.24.1-r0)
+(67/362) Installing gettext (0.24.1-r0)
+(68/362) Installing gettext-dev (0.24.1-r0)
+(69/362) Installing gdbm (1.24-r0)
+(70/362) Installing mpdecimal (4.0.1-r0)
+(71/362) Installing libpanelw (6.5_p20250503-r0)
+(72/362) Installing sqlite-libs (3.49.2-r1)
+(73/362) Installing python3 (3.12.15-r0)
+(74/362) Installing python3-pycache-pyc0 (3.12.15-r0)
+(75/362) Installing pyc (3.12.15-r0)
+(76/362) Installing python3-pyc (3.12.15-r0)
+(77/362) Installing py3-parsing (3.2.5-r0)
+(78/362) Installing py3-parsing-pyc (3.2.5-r0)
+(79/362) Installing py3-packaging (25.0-r0)
+(80/362) Installing py3-packaging-pyc (25.0-r0)
+(81/362) Installing linux-headers (6.14.2-r0)
+(82/362) Installing libffi-dev (3.4.8-r0)
+(83/362) Installing bsd-compat-headers (0.7.2-r6)
+(84/362) Installing libformw (6.5_p20250503-r0)
+(85/362) Installing libmenuw (6.5_p20250503-r0)
+(86/362) Installing libncurses++ (6.5_p20250503-r0)
+(87/362) Installing ncurses-dev (6.5_p20250503-r0)
+(88/362) Installing libedit (20250104.3.1-r1)
+(89/362) Installing libedit-dev (20250104.3.1-r1)
+(90/362) Installing zlib-dev (1.3.2-r1)
+(91/362) Installing libpcre2-16 (10.46-r1)
+(92/362) Installing libpcre2-32 (10.46-r1)
+(93/362) Installing pcre2-dev (10.46-r1)
+(94/362) Installing libuuid (2.41.6-r1)
+(95/362) Installing libfdisk (2.41.6-r1)
+(96/362) Installing skalibs-libs (2.14.4.0-r0)
+(97/362) Installing utmps-libs (0.1.3.1-r0)
+(98/362) Installing linux-pam (1.7.0-r4)
+(99/362) Installing liblastlog2 (2.41.6-r1)
+(100/362) Installing libsmartcols (2.41.6-r1)
+(101/362) Installing sqlite (3.49.2-r1)
+(102/362) Installing sqlite-dev (3.49.2-r1)
+(103/362) Installing util-linux-dev (2.41.6-r1)
+(104/362) Installing glib-dev (2.84.4-r0)
+(105/362) Installing libturbojpeg (3.1.0-r0)
+(106/362) Installing libjpeg-turbo-dev (3.1.0-r0)
+(107/362) Installing libpng-dev (1.6.59-r0)
+(108/362) Installing libtiffxx (4.7.2-r0)
+(109/362) Installing libwebpdecoder (1.5.0-r0)
+(110/362) Installing libwebpdemux (1.5.0-r0)
+(111/362) Installing libwebpmux (1.5.0-r0)
+(112/362) Installing libwebp-dev (1.5.0-r0)
+(113/362) Installing zstd (1.5.7-r0)
+(114/362) Installing zstd-dev (1.5.7-r0)
+(115/362) Installing tiff-dev (4.7.2-r0)
+(116/362) Installing gdk-pixbuf-dev (2.42.12-r1)
+(117/362) Installing libxau (1.0.12-r0)
+(118/362) Installing xorgproto (2024.1-r0)
+(119/362) Installing libxau-dev (1.0.12-r0)
+(120/362) Installing xcb-proto (1.17.0-r0)
+(121/362) Installing xcb-proto-pyc (1.17.0-r0)
+(122/362) Installing libmd (1.1.0-r0)
+(123/362) Installing libbsd (0.12.2-r0)
+(124/362) Installing libxdmcp (1.1.5-r1)
+(125/362) Installing libxcb (1.17.0-r0)
+(126/362) Installing libxdmcp-dev (1.1.5-r1)
+(127/362) Installing libxcb-dev (1.17.0-r0)
+(128/362) Installing xtrans (1.5.2-r0)
+(129/362) Installing libx11 (1.8.11-r0)
+(130/362) Installing libx11-dev (1.8.11-r0)
+(131/362) Installing libepoxy (1.5.10-r1)
+(132/362) Installing hwdata-pci (0.395-r0)
+(133/362) Installing libpciaccess (0.18.1-r0)
+(134/362) Installing libdrm (2.4.124-r0)
+(135/362) Installing libpciaccess-dev (0.18.1-r0)
+(136/362) Installing libdrm-dev (2.4.124-r0)
+(137/362) Installing libxext (1.3.6-r2)
+(138/362) Installing libxext-dev (1.3.6-r2)
+(139/362) Installing libxdamage (1.1.6-r5)
+(140/362) Installing libxfixes (6.0.1-r4)
+(141/362) Installing libxfixes-dev (6.0.1-r4)
+(142/362) Installing libxdamage-dev (1.1.6-r5)
+(143/362) Installing libxshmfence (1.3.3-r0)
+(144/362) Installing libxshmfence-dev (1.3.3-r0)
+(145/362) Installing llvm20-libs (20.1.8-r0)
+(146/362) Installing spirv-tools (1.4.313.0-r0)
+(147/362) Installing libelf (0.193-r0)
+(148/362) Installing wayland-libs-server (1.23.1-r3)
+(149/362) Installing mesa (25.1.9-r0)
+(150/362) Installing mesa-gbm (25.1.9-r0)
+(151/362) Installing wayland-libs-client (1.23.1-r3)
+(152/362) Installing mesa-egl (25.1.9-r0)
+(153/362) Installing libxxf86vm (1.1.7-r0)
+(154/362) Installing mesa-gl (25.1.9-r0)
+(155/362) Installing mesa-gles (25.1.9-r0)
+(156/362) Installing clang20-headers (20.1.8-r0)
+(157/362) Installing libclc (20.1.8-r0)
+(158/362) Installing spirv-llvm-translator-libs (20.1.2-r0)
+(159/362) Installing clang20-libs (20.1.8-r0)
+(160/362) Installing mesa-rusticl (25.1.9-r0)
+(161/362) Installing mesa-xatracker (25.1.9-r0)
+(162/362) Installing libxxf86vm-dev (1.1.7-r0)
+(163/362) Installing mesa-dev (25.1.9-r0)
+(164/362) Installing libepoxy-dev (1.5.10-r1)
+(165/362) Installing libxi (1.8.2-r0)
+(166/362) Installing libxi-dev (1.8.2-r0)
+(167/362) Installing libxinerama (1.1.5-r4)
+(168/362) Installing libxinerama-dev (1.1.5-r4)
+(169/362) Installing xkeyboard-config (2.43-r0)
+(170/362) Installing libxkbcommon (1.8.1-r2)
+(171/362) Installing libxkbcommon-x11 (1.8.1-r2)
+(172/362) Installing xz-dev (5.8.4-r0)
+(173/362) Installing libxml2-dev (2.13.9-r1)
+(174/362) Installing libxkbcommon-dev (1.8.1-r2)
+(175/362) Installing wayland-libs-cursor (1.23.1-r3)
+(176/362) Installing wayland-protocols (1.44-r0)
+(177/362) Installing gobject-introspection (1.84.0-r0)
+(178/362) Installing hicolor-icon-theme (0.18-r0)
+(179/362) Installing gtk-update-icon-cache (3.24.50-r0)
+(180/362) Installing libxcomposite (0.4.6-r5)
+(181/362) Installing libxrender (0.9.12-r0)
+(182/362) Installing libxcursor (1.2.3-r0)
+(183/362) Installing libxrandr (1.5.4-r1)
+(184/362) Installing libatk-1.0 (2.56.5-r0)
+(185/362) Installing dbus-libs (1.16.2-r1)
+(186/362) Installing at-spi2-core-libs (2.56.5-r0)
+(187/362) Installing libxtst (1.2.5-r0)
+(188/362) Installing at-spi2-core (2.56.5-r0)
+(189/362) Installing libatk-bridge-2.0 (2.56.5-r0)
+(190/362) Installing freetype (2.13.3-r0)
+(191/362) Installing fontconfig (2.15.0-r3)
+(192/362) Installing pixman (0.46.4-r0)
+(193/362) Installing cairo (1.18.4-r0)
+(194/362) Installing cairo-gobject (1.18.4-r0)
+(195/362) Installing avahi-libs (0.8-r21)
+(196/362) Installing nettle (3.10.2-r0)
+(197/362) Installing libtasn1 (4.21.0-r0)
+(198/362) Installing p11-kit (0.26.2-r0)
+(199/362) Installing gnutls (3.8.13-r0)
+(200/362) Installing cups-libs (2.4.18-r0)
+(201/362) Installing fribidi (1.0.16-r1)
+(202/362) Installing graphite2 (1.3.14-r6)
+(203/362) Installing harfbuzz (11.2.1-r0)
+(204/362) Installing libxft (2.3.8-r3)
+(205/362) Installing pango (1.56.3-r0)
+(206/362) Installing wayland-libs-egl (1.23.1-r3)
+(207/362) Installing gtk+3.0 (3.24.50-r0)
+(208/362) Installing dbus-dev (1.16.2-r1)
+(209/362) Installing libxtst-dev (1.2.5-r0)
+(210/362) Installing at-spi2-core-dev (2.56.5-r0)
+(211/362) Installing cairo-tools (1.18.4-r0)
+(212/362) Installing expat (2.9.0-r0)
+(213/362) Installing expat-dev (2.9.0-r0)
+(214/362) Installing brotli (1.1.1-r0)
+(215/362) Installing brotli-dev (1.1.1-r0)
+(216/362) Installing freetype-dev (2.13.3-r0)
+(217/362) Installing fontconfig-dev (2.15.0-r3)
+(218/362) Installing libxrender-dev (0.9.12-r0)
+(219/362) Installing pixman-dev (0.46.4-r0)
+(220/362) Installing util-macros (1.20.1-r0)
+(221/362) Installing xcb-util (0.4.1-r3)
+(222/362) Installing xcb-util-dev (0.4.1-r3)
+(223/362) Installing cairo-dev (1.18.4-r0)
+(224/362) Installing fribidi-dev (1.0.16-r1)
+(225/362) Installing pango-tools (1.56.3-r0)
+(226/362) Installing harfbuzz-cairo (11.2.1-r0)
+(227/362) Installing harfbuzz-gobject (11.2.1-r0)
+(228/362) Installing icu-data-en (76.1-r1)
+Executing icu-data-en-76.1-r1.post-install
+*
+(229/362) Installing icu-libs (76.1-r1)
+* If you need ICU with non-English locales and legacy charset support, install
+* package icu-data-full.
+*
+(230/362) Installing harfbuzz-icu (11.2.1-r0)
+(231/362) Installing harfbuzz-subset (11.2.1-r0)
+(232/362) Installing graphite2-dev (1.3.14-r6)
+(233/362) Installing icu (76.1-r1)
+(234/362) Installing icu-dev (76.1-r1)
+(235/362) Installing harfbuzz-dev (11.2.1-r0)
+(236/362) Installing libxft-dev (2.3.8-r3)
+(237/362) Installing pango-dev (1.56.3-r0)
+(238/362) Installing wayland-dev (1.23.1-r3)
+(239/362) Installing libxcomposite-dev (0.4.6-r5)
+(240/362) Installing libxcursor-dev (1.2.3-r0)
+(241/362) Installing libxrandr-dev (1.5.4-r1)
+(242/362) Installing gtk+3.0-dev (3.24.50-r0)
+(243/362) Installing ayatana-ido (0.10.4-r1)
+(244/362) Installing libayatana-indicator (0.9.4-r1)
+(245/362) Installing json-glib (1.10.8-r0)
+(246/362) Installing libdbusmenu-glib (16.04.0-r6)
+(247/362) Installing libdbusmenu-gtk3 (16.04.0-r6)
+(248/362) Installing libayatana-appindicator (0.5.94-r0)
+(249/362) Installing ayatana-ido-dev (0.10.4-r1)
+(250/362) Installing libayatana-indicator-dev (0.9.4-r1)
+(251/362) Installing json-glib-dev (1.10.8-r0)
+(252/362) Installing libdbusmenu-glib-dev (16.04.0-r6)
+(253/362) Installing libayatana-appindicator-dev (0.5.94-r0)
+(254/362) Installing libdav1d (1.5.1-r0)
+(255/362) Installing rsvg-convert (2.60.0-r0)
+(256/362) Installing librsvg (2.60.0-r0)
+(257/362) Installing dav1d-dev (1.5.1-r0)
+(258/362) Installing librsvg-dev (2.60.0-r0)
+(259/362) Installing openssl-dev (3.5.9-r0)
+(260/362) Installing patchelf (0.18.0-r3)
+(261/362) Installing py3-setuptools (80.9.0-r0)
+(262/362) Installing py3-setuptools-pyc (80.9.0-r0)
+(263/362) Installing py3-pip (25.1.1-r0)
+(264/362) Installing py3-pip-pyc (25.1.1-r0)
+(265/362) Installing gsettings-desktop-schemas (48.0-r0)
+(266/362) Installing duktape-libs (2.7.0-r2)
+(267/362) Installing libproxy (0.5.10-r0)
+(268/362) Installing glib-networking (2.80.1-r1)
+(269/362) Installing libsoup3 (3.6.5-r0)
+(270/362) Installing nghttp2-dev (1.69.0-r0)
+(271/362) Installing libpsl-utils (0.21.5-r3)
+(272/362) Installing libidn2-dev (2.3.7-r0)
+(273/362) Installing libpsl-dev (0.21.5-r3)
+(274/362) Installing libsoup3-dev (3.6.5-r0)
+(275/362) Installing libcap2 (2.78-r0)
+(276/362) Installing bubblewrap (0.12.0-r0)
+(277/362) Installing dbus (1.16.2-r1)
+Executing dbus-1.16.2-r1.pre-install
+Executing dbus-1.16.2-r1.post-install
+(278/362) Installing dbus-daemon-launch-helper (1.16.2-r1)
+(279/362) Installing xdg-dbus-proxy (0.1.6-r0)
+(280/362) Installing libgpg-error (1.55-r0)
+(281/362) Installing libgcrypt (1.10.3-r1)
+(282/362) Installing gcr-base (3.41.2-r1)
+(283/362) Installing gcr (3.41.2-r1)
+(284/362) Installing libcap-ng (0.8.5-r0)
+(285/362) Installing gnome-keyring (48.0-r0)
+(286/362) Installing gnome-keyring-pam (48.0-r0)
+(287/362) Installing aom-libs (3.12.1-r0)
+(288/362) Installing libyuv (0.0.1887.20251502-r1)
+(289/362) Installing libavif (1.3.0-r0)
+(290/362) Installing enchant2-libs (2.8.10-r0)
+(291/362) Installing alsa-lib (1.2.14-r0)
+(292/362) Installing flite (2.2-r5)
+(293/362) Installing libxv (1.0.13-r0)
+(294/362) Installing cdparanoia-libs (10.2-r14)
+(295/362) Installing graphene (1.10.8-r5)
+(296/362) Installing gstreamer (1.26.3-r0)
+(297/362) Installing gstreamer-ptp-helper (1.26.3-r0)
+(298/362) Installing libogg (1.3.5-r5)
+(299/362) Installing opus (1.5.2-r1)
+(300/362) Installing orc (0.4.40-r1)
+(301/362) Installing libtheora (1.1.1-r18)
+(302/362) Installing libvorbis (1.3.7-r2)
+(303/362) Installing gst-plugins-base (1.26.3-r0)
+(304/362) Installing openexr-libiex (3.3.11-r0)
+(305/362) Installing imath (3.1.12-r0)
+(306/362) Installing openexr-libilmthread (3.3.11-r0)
+(307/362) Installing libdeflate (1.23-r0)
+(308/362) Installing openexr-libopenexrcore (3.3.11-r0)
+(309/362) Installing openexr-libopenexr (3.3.11-r0)
+(310/362) Installing soundtouch (2.3.3-r0)
+(311/362) Installing libunibreak (6.1-r0)
+(312/362) Installing libass (0.17.3-r0)
+(313/362) Installing libraw1394 (2.1.2-r5)
+(314/362) Installing libusb (1.0.28-r0)
+(315/362) Installing libdc1394 (2.2.7-r0)
+(316/362) Installing libde265 (1.0.15-r1)
+(317/362) Installing tslib (1.23-r0)
+(318/362) Installing directfb (1.7.7-r8)
+(319/362) Installing faac (1.31.1-r0)
+(320/362) Installing fdk-aac (2.0.2-r4)
+(321/362) Installing libfreeaptx (0.2.2-r0)
+(322/362) Installing gsm (1.0.22-r3)
+(323/362) Installing eudev-libs (3.2.14-r5)
+(324/362) Installing libgudev (238-r0)
+(325/362) Installing lcms2 (2.19-r0)
+(326/362) Installing libldac (2.0.2.3-r1)
+(327/362) Installing libmodplug (0.8.9.0-r3)
+(328/362) Installing neon (0.33.0-r0)
+(329/362) Installing libnice (0.1.22-r0)
+(330/362) Installing openal-soft-libs (1.24.2-r0)
+(331/362) Installing openh264 (2.6.0-r0)
+(332/362) Installing openjpeg (2.5.4-r1)
+(333/362) Installing librtmp (2.4_git20190330-r5)
+(334/362) Installing sbc (2.0-r2)
+(335/362) Installing libflac (1.4.3-r1)
+(336/362) Installing lame-libs (3.100-r5)
+(337/362) Installing mpg123-libs (1.32.10-r0)
+(338/362) Installing libsndfile (1.2.2-r2)
+(339/362) Installing spandsp (0.0.6-r5)
+(340/362) Installing libsrt (1.5.3-r1)
+(341/362) Installing libsrtp (2.6.0-r0)
+(342/362) Installing libva (2.22.0-r1)
+(343/362) Installing vo-aacenc (0.1.3-r3)
+(344/362) Installing vo-amrwbenc (0.1.3-r3)
+(345/362) Installing vulkan-loader (1.4.313.0-r0)
+(346/362) Installing libzbar (0.23.93-r1)
+(347/362) Installing gst-plugins-bad (1.26.3-r0)
+(348/362) Installing hyphen (2.8.8-r3)
+(349/362) Installing giflib (5.2.2-r2)
+(350/362) Installing libhwy (1.0.7-r1)
+(351/362) Installing libjxl (0.10.3-r2)
+(352/362) Installing libevdev (1.13.3-r0)
+(353/362) Installing hidapi (0.14.0-r0)
+(354/362) Installing libmanette (0.2.12-r0)
+(355/362) Installing libseccomp (2.6.1-r0)
+(356/362) Installing libsecret (0.21.7-r0)
+(357/362) Installing libwoff2common (1.0.2-r4)
+(358/362) Installing libwoff2enc (1.0.2-r4)
+(359/362) Installing webkit2gtk-4.1 (2.48.1-r1)
+(360/362) Installing webkit2gtk-4.1-dev (2.48.1-r1)
+(361/362) Installing xdotool (3.20211022.1-r1)
+(362/362) Installing xdotool-dev (3.20211022.1-r1)
+Executing busybox-1.37.0-r20.trigger
+Executing ca-certificates-20261020-r0.trigger
+Executing glib-2.84.4-r0.trigger
+Executing shared-mime-info-2.4-r6.trigger
+Executing gdk-pixbuf-2.42.12-r1.trigger
+Executing gtk-update-icon-cache-3.24.50-r0.trigger
+Executing gtk+3.0-3.24.50-r0.trigger
+Executing dbus-1.16.2-r1.trigger
+OK: 1159 MiB in 378 packages
+info: downloading installer
+info: profile set to minimal
+info: default host tuple is aarch64-unknown-linux-musl
+info: syncing channel updates for stable-aarch64-unknown-linux-musl
+info: latest update on 2026-10-15 for version 1.99.1 (58cf8f9c3 2026-10-13)
+info: downloading 3 components
+info: default toolchain set to stable-aarch64-unknown-linux-musl
+
+  stable-aarch64-unknown-linux-musl installed - rustc 1.99.1 (58cf8f9c3 2026-10-13)
+
+
+Rust is installed now. Great!
+
+To get started you may need to restart your current shell.
+This would reload your PATH environment variable to include
+Cargo's bin directory (/tmp/cargo/bin).
+
+To configure your current shell, you need to source the
+corresponding env file under /tmp/cargo.
+
+Consider running the right command for your shell (note the leading DOT):
+. "/tmp/cargo/env" # For sh/ash/dash/pdksh
+cargo:rerun-if-env-changed=CC_aarch64-unknown-linux-musl
+CC_aarch64-unknown-linux-musl = None
+cargo:rerun-if-env-changed=CC_aarch64_unknown_linux_musl
+CC_aarch64_unknown_linux_musl = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_aarch64_unknown_linux_musl
+CFLAGS_aarch64_unknown_linux_musl = None
+cargo:rerun-if-env-changed=CFLAGS_aarch64-unknown-linux-musl
+CFLAGS_aarch64-unknown-linux-musl = None
+info: component rust-std is up to date
+downloading uv 0.13.5 aarch64-unknown-linux-musl-static
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading maturin (9.6MiB)
+ Downloaded maturin
+Installed 1 package in 1ms
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded atk-sys v0.18.2
+  Downloaded autocfg v1.5.1
+  Downloaded bitflags v1.3.2
+  Downloaded futures-io v0.3.34
+  Downloaded idna_adapter v1.2.2
+  Downloaded equivalent v1.0.3
+  Downloaded field-offset v0.3.6
+  Downloaded dlopen2_derive v0.4.3
+  Downloaded cairo-sys-rs v0.18.2
+  Downloaded dirs-sys v0.5.0
+  Downloaded errno v0.3.14
+  Downloaded futures-executor v0.3.34
+  Downloaded atk v0.18.2
+  Downloaded form_urlencoded v1.2.2
+  Downloaded futures-macro v0.3.34
+  Downloaded anyhow v1.0.104
+  Downloaded cairo-rs v0.18.5
+  Downloaded crossbeam-utils v0.8.23
+  Downloaded displaydoc v0.2.7
+  Downloaded fastrand v2.5.0
+  Downloaded gtk-sys v0.18.2
+  Downloaded idna v1.1.0
+  Downloaded proc-macro2 v1.0.107
+  Downloaded bitflags v2.13.2
+  Downloaded bytes v1.12.1
+  Downloaded cfg-expr v0.15.8
+  Downloaded cfg-if v1.0.5
+  Downloaded cookie v0.18.2
+  Downloaded crossbeam-channel v0.5.17
+  Downloaded deranged v0.5.9
+  Downloaded dirs v7.0.0
+  Downloaded dlopen2 v0.8.2
+  Downloaded dpi v0.1.2
+  Downloaded futures-channel v0.3.34
+  Downloaded futures-core v0.3.34
+  Downloaded gobject-sys v0.18.0
+  Downloaded heck v0.5.0
+  Downloaded scopeguard v1.2.0
+  Downloaded hashbrown v0.17.1
+  Downloaded http v1.5.0
+  Downloaded futures-task v0.3.34
+  Downloaded gdk-pixbuf-sys v0.18.0
+  Downloaded icu_properties v2.4.0
+  Downloaded semver v1.0.28
+  Downloaded num-traits v0.2.19
+  Downloaded itoa v1.0.18
+  Downloaded powerfmt v0.2.1
+  Downloaded proc-macro-crate v2.0.2
+  Downloaded serde v1.0.229
+  Downloaded rustc_version v0.4.1
+  Downloaded heck v0.4.1
+  Downloaded option-ext v0.2.0
+  Downloaded thiserror v1.0.69
+  Downloaded thiserror-impl v2.0.21
+  Downloaded zerofrom-derive v0.1.8
+  Downloaded gdkwayland-sys v0.18.2
+  Downloaded thiserror v2.0.21
+  Downloaded thiserror-impl v1.0.69
+  Downloaded memoffset v0.9.1
+  Downloaded num-conv v0.2.2
+  Downloaded percent-encoding v2.3.2
+  Downloaded pin-project-lite v0.2.17
+  Downloaded potential_utf v0.1.6
+  Downloaded proc-macro-error-attr v1.0.4
+  Downloaded pyo3-macros v0.29.3
+  Downloaded raw-window-handle v0.6.2
+  Downloaded stable_deref_trait v1.2.1
+  Downloaded tempfile v3.27.0
+  Downloaded time-core v0.1.9
+  Downloaded utf8_iter v1.0.4
+  Downloaded version_check v0.9.5
+  Downloaded gtk3-macros v0.18.2
+  Downloaded javascriptcore-rs v1.1.2
+  Downloaded javascriptcore-rs-sys v1.1.1
+  Downloaded lock_api v0.4.14
+  Downloaded memmap2 v0.9.12
+  Downloaded pkg-config v0.3.34
+  Downloaded proc-macro-crate v1.3.1
+  Downloaded proc-macro-error v1.0.4
+  Downloaded quote v1.0.47
+  Downloaded slab v0.4.12
+  Downloaded time-macros v0.2.32
+  Downloaded toml_datetime v0.6.3
+  Downloaded writeable v0.6.4
+  Downloaded gdk-pixbuf v0.18.5
+  Downloaded glib-macros v0.18.5
+  Downloaded glib-sys v0.18.1
+  Downloaded icu_provider v2.4.0
+  Downloaded litemap v0.8.3
+  Downloaded log v0.4.34
+  Downloaded once_cell v1.21.4
+  Downloaded pango v0.18.3
+  Downloaded pango-sys v0.18.0
+  Downloaded parking_lot_core v0.9.12
+  Downloaded pyo3-build-config v0.29.3
+  Downloaded rmp v0.8.15
+  Downloaded rmp-serde v1.3.1
+  Downloaded serde_spanned v0.6.9
+  Downloaded getrandom v0.4.3
+  Downloaded gio-sys v0.18.1
+  Downloaded icu_normalizer_data v2.4.0
+  Downloaded parking_lot v0.12.5
+  Downloaded yoke-derive v0.8.4
+  Downloaded zerofrom v0.1.8
+  Downloaded pyo3-ffi v0.29.3
+  Downloaded pyo3-macros-backend v0.29.3
+  Downloaded gdk v0.18.2
+  Downloaded gdk-sys v0.18.2
+  Downloaded icu_collections v2.4.0
+  Downloaded icu_locale_core v2.4.0
+  Downloaded indexmap v2.14.2
+  Downloaded memchr v2.8.3
+  Downloaded soup3-sys v0.5.0
+  Downloaded synstructure v0.14.0
+  Downloaded target-lexicon v0.13.5
+  Downloaded unicode-ident v1.0.27
+  Downloaded zerovec-derive v0.11.7
+  Downloaded system-deps v6.2.2
+  Downloaded version-compare v0.2.1
+  Downloaded webkit2gtk-sys v2.0.2
+  Downloaded futures-util v0.3.34
+  Downloaded gio v0.18.4
+  Downloaded icu_properties_data v2.4.0
+  Downloaded glib v0.18.5
+  Downloaded tinystr v0.8.5
+  Downloaded zmij v1.0.23
+  Downloaded soup3 v0.5.0
+  Downloaded target-lexicon v0.12.16
+  Downloaded yoke v0.8.4
+  Downloaded smallvec v1.16.3
+  Downloaded gtk v0.18.2
+  Downloaded toml v0.8.2
+  Downloaded webkit2gtk v2.0.2
+  Downloaded serde_core v1.0.229
+  Downloaded icu_normalizer v2.4.0
+  Downloaded toml_edit v0.20.2
+  Downloaded zerotrie v0.2.5
+  Downloaded serde_derive v1.0.229
+  Downloaded url v2.5.8
+  Downloaded toml_edit v0.19.15
+  Downloaded libc v0.2.191
+  Downloaded zerovec v0.11.9
+  Downloaded pyo3 v0.29.3
+  Downloaded serde_json v1.0.154
+  Downloaded rustix v1.1.5
+  Downloaded winnow v0.5.40
+  Downloaded syn v1.0.109
+  Downloaded time v0.3.55
+  Downloaded wry v0.57.1
+  Downloaded syn v3.0.9
+  Downloaded tao v0.37.2
+  Downloaded syn v2.0.119
+  Downloaded linux-raw-sys v0.12.1
+🍹 Building a mixed python/rust project
+🐍 Found CPython 3.12 at /usr/bin/python3
+🔗 Found pyo3 bindings with abi3-py3.9 support
+📡 Using build options bindings from pyproject.toml
+warning: profile package spec `miniz_oxide` in profile `dev` did not match any packages
+   Compiling serde_core v1.0.229
+   Compiling serde v1.0.229
+   Compiling equivalent v1.0.3
+   Compiling hashbrown v0.17.1
+   Compiling winnow v0.5.40
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.27
+   Compiling indexmap v2.14.2
+   Compiling target-lexicon v0.12.16
+   Compiling heck v0.5.0
+   Compiling quote v1.0.47
+   Compiling smallvec v1.16.3
+   Compiling pkg-config v0.3.34
+   Compiling version-compare v0.2.1
+   Compiling cfg-expr v0.15.8
+   Compiling syn v3.0.9
+   Compiling libc v0.2.191
+   Compiling version_check v0.9.5
+   Compiling syn v2.0.119
+   Compiling toml_datetime v0.6.3
+   Compiling serde_spanned v0.6.9
+   Compiling toml_edit v0.20.2
+   Compiling proc-macro-error-attr v1.0.4
+   Compiling syn v1.0.109
+   Compiling proc-macro-error v1.0.4
+   Compiling futures-core v0.3.34
+   Compiling toml v0.8.2
+   Compiling system-deps v6.2.2
+   Compiling synstructure v0.14.0
+   Compiling glib-sys v0.18.1
+   Compiling gobject-sys v0.18.0
+   Compiling gio-sys v0.18.1
+   Compiling futures-task v0.3.34
+   Compiling futures-macro v0.3.34
+   Compiling zerofrom-derive v0.1.8
+   Compiling thiserror v1.0.69
+   Compiling pin-project-lite v0.2.17
+   Compiling slab v0.4.12
+   Compiling once_cell v1.21.4
+   Compiling futures-util v0.3.34
+   Compiling thiserror-impl v1.0.69
+   Compiling zerofrom v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling gdk-sys v0.18.2
+   Compiling proc-macro-crate v2.0.2
+   Compiling memchr v2.8.3
+   Compiling heck v0.4.1
+   Compiling stable_deref_trait v1.2.1
+   Compiling glib-macros v0.18.5
+   Compiling yoke v0.8.4
+   Compiling atk-sys v0.18.2
+   Compiling futures-channel v0.3.34
+   Compiling bitflags v2.13.2
+   Compiling autocfg v1.5.1
+   Compiling futures-executor v0.3.34
+   Compiling zerovec-derive v0.11.7
+   Compiling gdk-pixbuf-sys v0.18.0
+   Compiling cairo-sys-rs v0.18.2
+   Compiling pango-sys v0.18.0
+   Compiling displaydoc v0.2.7
+   Compiling zerovec v0.11.9
+   Compiling gtk-sys v0.18.2
+   Compiling gio v0.18.4
+   Compiling futures-io v0.3.34
+   Compiling target-lexicon v0.13.5
+   Compiling writeable v0.6.4
+   Compiling litemap v0.8.3
+   Compiling tinystr v0.8.5
+   Compiling semver v1.0.28
+   Compiling icu_locale_core v2.4.0
+   Compiling potential_utf v0.1.6
+   Compiling glib v0.18.5
+   Compiling rustc_version v0.4.1
+   Compiling zerotrie v0.2.5
+   Compiling memoffset v0.9.1
+   Compiling utf8_iter v1.0.4
+   Compiling icu_normalizer_data v2.4.0
+   Compiling icu_properties_data v2.4.0
+   Compiling icu_provider v2.4.0
+   Compiling icu_collections v2.4.0
+   Compiling field-offset v0.3.6
+   Compiling pyo3-build-config v0.29.3
+   Compiling javascriptcore-rs-sys v1.1.1
+   Compiling soup3-sys v0.5.0
+   Compiling toml_edit v0.19.15
+   Compiling proc-macro-crate v1.3.1
+   Compiling serde_derive v1.0.229
+   Compiling webkit2gtk-sys v2.0.2
+   Compiling gtk v0.18.2
+   Compiling gtk3-macros v0.18.2
+   Compiling icu_properties v2.4.0
+   Compiling icu_normalizer v2.4.0
+   Compiling pyo3-ffi v0.29.3
+   Compiling num-traits v0.2.19
+   Compiling bitflags v1.3.2
+   Compiling num-conv v0.2.2
+   Compiling parking_lot_core v0.9.12
+   Compiling time-core v0.1.9
+   Compiling crossbeam-utils v0.8.23
+   Compiling percent-encoding v2.3.2
+   Compiling time-macros v0.2.32
+   Compiling idna_adapter v1.2.2
+   Compiling cookie v0.18.2
+   Compiling thiserror v2.0.21
+   Compiling cairo-rs v0.18.5
+   Compiling atk v0.18.2
+   Compiling itoa v1.0.18
+   Compiling option-ext v0.2.0
+   Compiling scopeguard v1.2.0
+   Compiling anyhow v1.0.104
+   Compiling zmij v1.0.23
+   Compiling deranged v0.5.9
+   Compiling cfg-if v1.0.5
+   Compiling powerfmt v0.2.1
+   Compiling bytes v1.12.1
+   Compiling time v0.3.55
+   Compiling lock_api v0.4.14
+   Compiling dirs-sys v0.5.0
+   Compiling javascriptcore-rs v1.1.2
+   Compiling idna v1.1.0
+   Compiling dpi v0.1.2
+   Compiling form_urlencoded v1.2.2
+   Compiling pyo3 v0.29.3
+   Compiling dlopen2_derive v0.4.3
+   Compiling thiserror-impl v2.0.21
+   Compiling pyo3-macros-backend v0.29.3
+   Compiling serde_json v1.0.154
+   Compiling raw-window-handle v0.6.2
+   Compiling wry v0.57.1
+   Compiling dlopen2 v0.8.2
+   Compiling crossbeam-channel v0.5.17
+   Compiling rmp v0.8.15
+   Compiling url v2.5.8
+   Compiling dirs v7.0.0
+   Compiling parking_lot v0.12.5
+   Compiling http v1.5.0
+   Compiling gdkwayland-sys v0.18.2
+   Compiling log v0.4.34
+   Compiling pyo3-macros v0.29.3
+   Compiling rmp-serde v1.3.1
+   Compiling gdk-pixbuf v0.18.5
+   Compiling pango v0.18.3
+   Compiling soup3 v0.5.0
+   Compiling gdk v0.18.2
+   Compiling webkit2gtk v2.0.2
+   Compiling tao v0.37.2
+   Compiling taurino v0.1.0 (/work/crates/taurino)
+    Finished `release` profile [optimized] target(s) in 1m 35s
+🔗 External shared libraries to be copied into the wheel:
+  /work/target/maturin/libcore.so requires:
+    libatspi.so.0 => /usr/lib/libatspi.so.0.0.1
+    libxcb-render.so.0 => /usr/lib/libxcb-render.so.0.0.0
+    libXext.so.6 => /usr/lib/libXext.so.6.4.0
+    libpangocairo-1.0.so.0 => /usr/lib/libpangocairo-1.0.so.0.5600.3
+    libharfbuzz.so.0 => /usr/lib/libharfbuzz.so.0.61121.0
+    libxcb.so.1 => /usr/lib/libxcb.so.1.1.0
+    libpng16.so.16 => /usr/lib/libpng16.so.16.59.0
+    libXcomposite.so.1 => /usr/lib/libXcomposite.so.1.0.0
+    libfontconfig.so.1 => /usr/lib/libfontconfig.so.1.12.1
+    libXfixes.so.3 => /usr/lib/libXfixes.so.3.1.0
+    libXdmcp.so.6 => /usr/lib/libXdmcp.so.6.0.0
+    libgcc_s.so.1 => /usr/lib/libgcc_s.so.1
+    libgobject-2.0.so.0 => /usr/lib/libgobject-2.0.so.0.8400.4
+    libXau.so.6 => /usr/lib/libXau.so.6.0.0
+    libbsd.so.0 => /usr/lib/libbsd.so.0.12.2
+    libpcre2-8.so.0 => /usr/lib/libpcre2-8.so.0.14.0
+    libgio-2.0.so.0 => /usr/lib/libgio-2.0.so.0.8400.4
+    libgdk-3.so.0 => /usr/lib/libgdk-3.so.0.2418.32
+    libbrotlidec.so.1 => /usr/lib/libbrotlidec.so.1.1.1
+    libcairo.so.2 => /usr/lib/libcairo.so.2.11804.4
+    libxcb-shm.so.0 => /usr/lib/libxcb-shm.so.0.0.0
+    libXdamage.so.1 => /usr/lib/libXdamage.so.1.1.0
+    libdbus-1.so.3 => /usr/lib/libdbus-1.so.3.38.3
+    libX11.so.6 => /usr/lib/libX11.so.6.4.0
+    libgmodule-2.0.so.0 => /usr/lib/libgmodule-2.0.so.0.8400.4
+    libexpat.so.1 => /usr/lib/libexpat.so.1.13.0
+    libintl.so.8 => /usr/lib/libintl.so.8.4.3
+    libwayland-client.so.0 => /usr/lib/libwayland-client.so.0.23.1
+    libgraphite2.so.3 => /usr/lib/libgraphite2.so.3.2.1
+    libfreetype.so.6 => /usr/lib/libfreetype.so.6.20.2
+    libatk-1.0.so.0 => /usr/lib/libatk-1.0.so.0.25614.1
+    libXi.so.6 => /usr/lib/libXi.so.6.1.0
+    libXrandr.so.2 => /usr/lib/libXrandr.so.2.2.0
+    libpixman-1.so.0 => /usr/lib/libpixman-1.so.0.46.4
+    libpangoft2-1.0.so.0 => /usr/lib/libpangoft2-1.0.so.0.5600.3
+    libwayland-cursor.so.0 => /usr/lib/libwayland-cursor.so.0.23.1
+    libgdk_pixbuf-2.0.so.0 => /usr/lib/libgdk_pixbuf-2.0.so.0.4200.12
+    libpango-1.0.so.0 => /usr/lib/libpango-1.0.so.0.5600.3
+    libmount.so.1 => /usr/lib/libmount.so.1.1.0
+    libxkbcommon.so.0 => /usr/lib/libxkbcommon.so.0.8.1
+    libmd.so.0 => /usr/lib/libmd.so.0.1.0
+    libcairo-gobject.so.2 => /usr/lib/libcairo-gobject.so.2.11804.4
+    libblkid.so.1 => /usr/lib/libblkid.so.1.1.0
+    libXrender.so.1 => /usr/lib/libXrender.so.1.3.0
+    libXcursor.so.1 => /usr/lib/libXcursor.so.1.0.2
+    libwayland-egl.so.1 => /usr/lib/libwayland-egl.so.1.23.1
+    libatk-bridge-2.0.so.0 => /usr/lib/libatk-bridge-2.0.so.0.0.0
+    libeconf.so.0 => /usr/lib/libeconf.so.0.6.2
+    libjpeg.so.8 => /usr/lib/libjpeg.so.8.3.2
+    libglib-2.0.so.0 => /usr/lib/libglib-2.0.so.0.8400.4
+    libbz2.so.1 => /usr/lib/libbz2.so.1.0.8
+    libepoxy.so.0 => /usr/lib/libepoxy.so.0.0.0
+    libgtk-3.so.0 => /usr/lib/libgtk-3.so.0.2418.32
+    libXinerama.so.1 => /usr/lib/libXinerama.so.1.0.0
+    libfribidi.so.0 => /usr/lib/libfribidi.so.0.4.0
+    libffi.so.8 => /usr/lib/libffi.so.8.1.4
+    libbrotlicommon.so.1 => /usr/lib/libbrotlicommon.so.1.1.1
+💥 maturin failed
+  Caused by: Your library requires copying the above external libraries. Re-run with `--auditwheel=repair` to copy them.
+Error: Process completed with exit code 1.
+0s
+0s
+Post job cleanup.
+/usr/bin/git version
+git version 2.55.0
+Temporarily overriding HOME='/home/runner/work/_temp/dee031f5-6be8-4056-909c-c85ba3412653' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/subsystem/subsystem
+/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+0s
+Cleaning up orphan processes
+Warning: Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
