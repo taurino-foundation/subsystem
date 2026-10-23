@@ -79,7 +79,9 @@ def main() -> int:
         for label, (platform, arch) in EXPECTED.items():
             # Accept macOS universal2 only for a single-architecture check;
             # the all-targets job needs distinct filenames.
-            if (tag.startswith(platform + "_") or (platform == "macosx" and tag.startswith("macosx_"))) and (arch in tag or (platform == "macosx" and "universal2" in tag)):
+            if (tag.startswith(platform + "_") or (platform == "macosx" and tag.startswith("macosx_"))) and (
+                arch in tag or (platform == "macosx" and "universal2" in tag)
+            ):
                 matched.append(label)
         if args.all_targets:
             if len(matched) != 1:

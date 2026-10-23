@@ -112,10 +112,13 @@ hook-dirs = "taurino._pyinstaller:get_hook_dirs"
 
 [dependency-groups]
 dev = [
+    { include-group = "build" },
     { include-group = "lint" },
     { include-group = "test" },
 ]
-
+build = [
+    "maturin>=1.14.1,<2.0",
+]
 lint = [
     "ruff>=0.17.0,<1",
 ]

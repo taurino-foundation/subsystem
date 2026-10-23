@@ -14,7 +14,7 @@ from unittest.mock import MagicMock
 
 import pytest
 
-from taurino.error import RuntimeStartError, RuntimeStateError
+from taurino.errors import RuntimeStartError, RuntimeStateError
 from taurino.runtime import Runtime
 
 # Import the actual module containing Runtime and _gui_process_entry.

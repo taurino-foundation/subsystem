@@ -1,4 +1,3 @@
-
 """Basic example for the Taurino desktop runtime.
 
 Run:
@@ -12,7 +11,7 @@ from __future__ import annotations
 import multiprocessing as mp
 import time
 
-from taurino.error import RuntimeStartError, RuntimeStateError
+from taurino.errors import RuntimeStartError, RuntimeStateError
 from taurino.runtime import Runtime
 
 

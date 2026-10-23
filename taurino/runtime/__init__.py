@@ -14,7 +14,7 @@ from multiprocessing.context import BaseContext
 from multiprocessing.process import BaseProcess
 from typing import Any, Literal, Protocol, cast
 
-from taurino.error import RuntimeStartError, RuntimeStateError
+from taurino.errors import RuntimeStartError, RuntimeStateError
 
 from .core import runtime
 
