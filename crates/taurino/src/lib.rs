@@ -129,10 +129,9 @@ pub fn get_taurino_version() -> &'static str {
 fn run_runtime(config: Vec<u8>, shutdown_event: Py<PyAny>, notify_ready: Py<PyAny>) -> Result<()> {
     let app = Taurino::new(config).context("Failed to initialize Taurino Runtime")?;
 
-    app.run(notify_ready, shutdown_event)
-        .context("Taurino  runtime failed")
+    app.run(shutdown_event, notify_ready)
+        .context("Taurino runtime failed")
 }
-
 #[pyfunction]
 fn runtime(
     py: Python<'_>,

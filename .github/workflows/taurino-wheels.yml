@@ -173,7 +173,7 @@ jobs:
           uv run \
             --no-project \
             --python .wheel-test \
-            python -c "import taurino.rust._taurino; print('Native import OK')"
+            python -c "import taurino.runtime.core; print('Native import OK')"
 
       - name: Upload wheel
         uses: actions/upload-artifact@v4
@@ -222,7 +222,7 @@ jobs:
             webkit2gtk-4.1-dev \
             libayatana-appindicator-dev \
             librsvg-dev \
-            libxdo-dev \
+            xdotool-dev \
             patchelf
 
       - name: Checkout
@@ -284,7 +284,7 @@ jobs:
             dist/*.whl
 
           .wheel-test/bin/python \
-            -c "import taurino.rust._taurino; print('Native import OK')"
+            -c "import taurino.runtime.core; print('Native import OK')"
 
       - name: Upload musllinux wheel
         uses: actions/upload-artifact@v4

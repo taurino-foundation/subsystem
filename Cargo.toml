@@ -1,7 +1,8 @@
 [workspace]
 resolver = "3"
 members = [
-    "crates/taurino", "crates/taurino-ipc", 
+    "crates/taurino", 
+    "crates/taurino-ipc", 
     "crates/taurino-macros", 
     "crates/taurino-window",
 ]
