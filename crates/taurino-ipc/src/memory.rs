@@ -108,8 +108,9 @@ impl SharedMemory {
 }
 
 fn check_alignment(ptr: *const u8) -> Result<()> {
-    if (ptr as usize) % std::mem::align_of::<Region>() != 0 {
-        bail!("shared region is not aligned")
+    if !(ptr as usize).is_multiple_of(std::mem::align_of::<Region>()) {
+        bail!("shared region is not aligned");
     }
+
     Ok(())
 }
